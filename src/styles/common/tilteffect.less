@@ -1,0 +1,148 @@
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tilt__back {
+	position: relative;
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.mobile-note {
+	position: absolute;
+	bottom: 1em;
+	color: #fff;
+	font-size: 1.15em;
+	text-align: center;
+	width: 100%;
+	padding: 1em;
+	background: #fb7f93;
+	display: none;
+	font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Header */
+.banner-header {
+	text-align: center;
+	height: 100vh;
+	overflow: hidden;
+	background: url(../../img/images/1.jpg) no-repeat center center;
+	background-size: auto 100vh;
+}
+
+.banner-header h1 {
+	margin: 0.5em 0 0;
+	letter-spacing: -1px;
+	font-weight: 400;
+	font-size: 4.25em;
+	line-height: 1;
+	position: absolute;
+	width: 100%;
+	top: 25vh;
+	color: #fff;
+	pointer-events: none;
+	font-family: 'Playfair Display', Georgia, serif;
+}
+
+.banner-header h1 span {
+	display: block;
+	padding: 2em 0 1em;
+	color: #3a3231;
+	font-size: 0.2em;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 3px;
+	text-shadow: none;
+	font-family: 'Questrial', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+.hero {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	bottom: 50px;
+	right: 50px;
+	overflow: hidden;
+}
+
+.hero__imgwrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.hero__imgwrap::after {
+	content: '';
+	position: absolute;
+	background: rgba(76,0,1,0.1);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.hero__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: 100vh;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.hero__imgwrap .tilt__back,
+.hero__imgwrap .tilt__front {
+	background-size: auto 100vh;
+}
+
+@media screen and (min-aspect-ratio: 1440/960) {
+	.hero__imgwrap .tilt__back,
+	.hero__imgwrap .tilt__front,
+	.banner-header {
+		background-size: 100vw auto;
+	}
+	.hero__img {
+		width: 100vw;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 40em){
+	.banner-header h1 {
+		font-size: 2.5em;
+	}
+	.hero {
+		left: 20px;
+		bottom: 20px;
+		right: 20px;
+		top: 20px;
+	}
+	.mobile-note {
+		display: block;
+	}
+}
+

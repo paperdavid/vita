@@ -1,0 +1,20 @@
+/* TEAM */
+	Developer: David Mekerihvili
+	Site: paperdavid.ru
+	Contact: paperdavid [at] gmail.com
+	Twitter: @pubtheoffice
+	From: Saint-Petersburg, Russia
+	Location: Saint-Petersburg, Russia
+
+/* THANKS */
+
+	School: http://epixx.ru
+	Developer: Igor Timohin
+
+/* SITE */
+	Language: Russian
+	Doctype:HTML5
+	Standards: HTML5, CSS3
+	Components: Modernizr, jQuery, Bootstrap, etc.
+	IDE: PhpShtorm, Gulp, Git, GitHub Pages
+	Software: Software used for the development

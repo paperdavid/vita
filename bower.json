@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "authors": [
+    "David [Paperdavid] Mekerishvili <paperdavid@gmail.com>"
+  ],
+  "description": "Front-End template",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.4",
+    "css_browser_selector": "rafaelp/css_browser_selector",
+    "modernizr": "~2.8.3"
+  },
+  "dependencies": {}
+}
