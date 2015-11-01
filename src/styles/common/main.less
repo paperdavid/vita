@@ -1,6 +1,7 @@
 .promo {
-  position: absolute;
+  position: relative;
   width: 100%;
+  height: 100vh;
 
   &__bg {
     position: absolute;
@@ -46,8 +47,7 @@
       position: absolute;
       left: 40px;
       right: 40px;
-      top: 10%;
-      margin-top: 100px;
+      top: 20%;
       text-align: center;
 
 
@@ -75,13 +75,13 @@
       &__link {
         display: block;
         margin: 10px auto;
-        max-width: 300px;
-        font-size: 16px;
+        max-width: 100px;
+        font-size: 18px;
         z-index: 12;
 
 
         &:hover {
-          text-decoration: underline;
+          color: #000;
         }
       }
     }
@@ -89,7 +89,46 @@
 }
 
 
+@media (max-width: @screen-sm) {
+  .promo {
+    height: 50vh;
 
-main {
-  position: relative;
+    &__img {
+      height: 50vh;
+    }
+
+    &__item {
+      height: 50vh;
+    }
+  }
 }
+
+@media (max-width: 760px) {
+  .promo {
+    height: 100vh;
+
+    &__img {
+      height: 50vh;
+    }
+
+    &__item {
+      height: 50vh;
+    }
+
+    &--retail {
+      top: 0;
+    }
+
+    &--wholesale {
+      top: 50vh;
+    }
+  }
+}
+
+
+
+
+
+
+
+
