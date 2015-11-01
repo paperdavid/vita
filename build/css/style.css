@@ -350,7 +350,7 @@ body
     line-height: 1.42857143;
 
     color: #333;
-    background-color: #fff;
+    background-color: #000;
 }
 input,
 button,
@@ -418,7 +418,7 @@ img
 
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #000;
 }
 .img-circle
 {
@@ -3904,7 +3904,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     color: #555;
     border: 1px solid #ddd;
     border-bottom-color: transparent;
-    background-color: #fff;
+    background-color: #000;
 }
 .nav-tabs.nav-justified
 {
@@ -3963,7 +3963,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs.nav-justified > .active > a:focus
     {
-        border-bottom-color: #fff;
+        border-bottom-color: #000;
     }
 }
 .nav-pills > li
@@ -4053,7 +4053,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     .nav-tabs-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus
     {
-        border-bottom-color: #fff;
+        border-bottom-color: #000;
     }
 }
 .tab-content > .tab-pane
@@ -5176,7 +5176,7 @@ a.badge:focus
 
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #000;
 }
 .thumbnail > img,
 .thumbnail a > img
@@ -7713,10 +7713,12 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 .footer
 {
     padding: 40px 15px 30px;
+
+    color: rgba(255, 255, 255, .8);
 }
 .footer a
 {
-    color: #333;
+    color: rgba(255, 255, 255, .8);
 }
 .footer a:hover
 {
