@@ -7570,7 +7570,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 .promo__item:hover
 {
     color: #fff;
-    background: rgba(0, 107, 183, .4);
+    background: rgba(0, 0, 0, .4);
 }
 .promo__item__content
 {
@@ -7579,7 +7579,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     right: 40px;
     left: 40px;
 
-    text-align: center;
+    text-align: left;
 }
 .promo__item__content__title
 {
@@ -7589,6 +7589,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     display: block;
 
+    max-width: 300px;
+    margin: 0 auto;
     margin-bottom: 10px;
 
     letter-spacing: .04em;
@@ -7611,8 +7613,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     display: block;
 
-    max-width: 100px;
-    margin: 10px auto;
+    max-width: 300px;
+    margin: 20px auto;
 }
 .promo__item__content__link:hover
 {
@@ -7707,4 +7709,46 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     left: 0;
 
     display: block;
+}
+.footer
+{
+    padding: 40px 15px 30px;
+}
+.footer a
+{
+    color: #333;
+}
+.footer a:hover
+{
+    text-decoration: none;
+
+    color: #777;
+}
+.footer__list ul
+{
+    padding-left: 0;
+
+    list-style: none;
+}
+.social .vk
+{
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../../img/svg/icons.svg);
+    background-position: 40px 0;
+    background-size: cover;
+}
+.social .instagram
+{
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../../img/svg/icons.svg);
+    background-position: 85px 1px;
+    background-size: cover;
 }

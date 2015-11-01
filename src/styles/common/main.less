@@ -39,7 +39,7 @@
 
 		&:hover {
 			color: #FFF;
-			background: rgba(0, 107, 183, .4);
+			background: rgba(0, 0, 0, 0.4);
 		}
 		
 
@@ -48,7 +48,7 @@
 			left: 40px;
 			right: 40px;
 			top: 20%;
-			text-align: center;
+			text-align: left;
 
 
 			&__icon {
@@ -63,6 +63,8 @@
 				line-height: 1.33;
 				text-transform: uppercase;
 				letter-spacing: .04em;
+				margin: 0 auto;
+				max-width: 300px;
 			}
 
 			&__text {
@@ -74,10 +76,11 @@
 
 			&__link {
 				display: block;
-				margin: 10px auto;
-				max-width: 100px;
+				margin: 20px auto;
+				max-width: 300px;
 				font-size: 18px;
 				z-index: 12;
+
 
 
 				&:hover {
@@ -187,10 +190,47 @@
 
 
 
+.footer {
+	padding: 40px 15px 30px;
+		
+
+	& a {
+		color: #333;
+
+		&:hover {
+			text-decoration: none;
+			color: #777;
+		}
+	}
+
+	&__list ul{
+		list-style: none;
+		padding-left: 0;
+	}
+}
 
 
+.social {
 
 
+	.vk {
+		display: inline-block;
+		background-image: url(../../img/svg/icons.svg);
+		background-position: 40px 0px;
+		background-size: cover;
+		height: 30px;
+		width: 30px;
+	}
+
+	.instagram {
+		display: inline-block;
+		background-image: url(../../img/svg/icons.svg);
+		background-position: 85px 1px;
+		background-size: cover;
+		height: 30px;
+		width: 30px;
+	}
+}
 
 
 
