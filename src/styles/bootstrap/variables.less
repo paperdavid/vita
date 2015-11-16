@@ -15,7 +15,7 @@
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
 @brand-primary:         darken(#428bca, 6.5%); // #337ab7
-@brand-success:         #5cb85c;
+@brand-success:         #b88b58;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -26,12 +26,12 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #141516;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            #fff;
 
 //** Global textual link color.
-@link-color:            @brand-primary;
+@link-color:            @brand-success;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -44,6 +44,8 @@
 
 @font-family-sans-serif:  ProbaProRegular, sans-serif;
 @font-family-italic:      ProbaProItalic;
+@font-family-serif:       Playfair Display, serif;
+@font-family-serif-italic:       Playfair DisplayItalic, serif;
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          14px;
@@ -63,7 +65,7 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
+@headings-font-family:    @font-family-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
@@ -345,7 +347,7 @@
 @container-md:                 @container-desktop;
 
 // Large screen / wide desktop
-@container-large-desktop:      (1140px + @grid-gutter-width);
+@container-large-desktop:      (98% + @grid-gutter-width);
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
 
