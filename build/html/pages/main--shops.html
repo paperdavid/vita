@@ -1,0 +1,251 @@
+<div class="map-box"><!-- map -->
+
+
+<!-- Карта -->
+	<div id="map"></div>
+	<script>
+
+		function initMap() {
+
+			var customMapType = new google.maps.StyledMapType([
+      {
+        stylers: [
+          { "saturation": -100 }
+        ]
+      },
+      {
+        elementType: 'labels',
+        stylers: [{visibility: 'on'}]
+      }
+    ], {
+      name: 'Custom Style'
+  });
+  var customMapTypeId = 'custom_style';
+
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: -34.397, lng: 150.644},
+				zoom: 6,
+				scrollwheel: false,
+				mapTypeControlOptions: {
+		    mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+		    }
+			});
+
+			map.mapTypes.set(customMapTypeId, customMapType);
+  		map.setMapTypeId(customMapTypeId);
+
+			var infoWindow = new google.maps.InfoWindow({map: map});
+
+
+
+			// Try HTML5 geolocation.
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					var pos = {
+						lat: position.coords.latitude,
+						lng: position.coords.longitude
+					};
+
+					infoWindow.setPosition(pos);
+					infoWindow.setContent('Location');
+					map.setCenter(pos);
+				}, function() {
+					handleLocationError(true, infoWindow, map.getCenter());
+				});
+			} else {
+				// Browser doesn't support Geolocation
+				handleLocationError(false, infoWindow, map.getCenter());
+			}
+		}
+
+		function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+			infoWindow.setPosition(pos);
+			infoWindow.setContent(browserHasGeolocation ?
+														'Error: The Geolocation service failed.' :
+														'Error: Your browser doesn\'t support geolocation.');
+		}
+
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3wJfJ4DsP1Kooai4j96ZcQ8kWf5NHXTc&signed_in=true&callback=initMap"
+			async defer>
+	</script>
+<!-- END Карта -->
+
+
+</div><!-- map -->
+
+
+
+
+
+
+
+<article class="promo"> <!-- promo -->
+
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-6 promo--retail">
+				<figure class="promo__bg">
+					<div class="promo__img promo__img--retail"></div>
+				</figure>
+				<a href="#" class="promo__item">
+					<span class="promo__item__content">
+						<span class="promo__item__content__icon"></span>
+						<span class="promo__item__content__title">Retail</span>
+						<span class="promo__item__content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eius magnam repudiandae vel harum dolore consequuntur id tempore error, modi fugit odit pariatur omnis ducimus quis. Excepturi autem voluptate optio.</span>
+						<span class="promo__item__content__link">Перейти > </span>
+					</span>
+				</a>
+			</div><!-- col -->
+
+			<div class="col-xs-12 col-sm-6 promo--wholesale">
+				<figure class="promo__bg">
+					<div class="promo__img promo__img--wholesale"></div>
+				</figure>
+				<a href="#" class="promo__item">
+					<span class="promo__item__content">
+						<span class="promo__item__content__icon"></span>
+						<span class="promo__item__content__title">Wholesale</span>
+						<span class="promo__item__content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repudiandae iusto cum dolorem illo vero ipsum nostrum a dolore commodi aliquid, totam recusandae, et tenetur quibusdam placeat, minus. Consectetur!</span>
+						<span class="promo__item__content__link">Перейти > </span>
+					</span>
+				</a>
+			</div><!-- col -->
+
+		</div> <!-- row -->
+
+</article> <!-- promo -->
+
+
+
+
+<div class="catalogue">
+	<div class="wrapper">
+		<div class="row">
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/1.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/2.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/3.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/4.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+		</div><!-- row -->
+
+
+		<div class="row">
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/5.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/6.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/7.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
+			<a href="#">
+				<figure class="catalogue__item__img">
+					<img src="../../img/images/clothes/8.jpg" alt="">
+				</figure>
+				<span class="catalogue__item__content">
+					<span class="catalogue__item__content__title">Lorem ipsum.</span>
+					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
+				</span>
+				</a>
+			</div>
+
+		</div><!-- row -->
+	</div><!-- wrapper -->
+</div><!-- catalogue -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
