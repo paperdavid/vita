@@ -1,0 +1,63 @@
+.info-block {
+	h1 {
+		font-family: @font-family-serif;
+		font-style: italic;
+		font-weight: bold;
+		color: #b88b58;
+	}
+
+	span {
+		font-size: 2em;
+	}
+}
+
+
+
+.shops {
+
+	&__city {
+		border-top: 1px solid rgba(255, 255, 255, .2);
+
+		& span {
+			font-size: 2em;
+			font-family: @font-family-serif;
+			font-style: italic;
+			font-weight: bold;
+			text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
+			color: #b88b58;
+		}
+	}
+
+
+	&__list {
+		padding-top: 10px;
+		margin-bottom: 30px;
+		margin-right: 20px;
+		border-top: 1px solid rgba(255, 255, 255, .2);
+
+		&:first-child {
+			margin-right: 0;
+		}
+
+		&--name {
+			display: block;
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		&--address {
+			display: block;
+
+		}
+
+		&--site {
+			display: block;
+
+		}
+	}
+}
+
+
+.inner {
+	margin: 5em 0;
+}

@@ -108,19 +108,20 @@
 		function initMap() {
 
 			var customMapType = new google.maps.StyledMapType([
-      {
-        stylers: [
-          { "saturation": -100 }
-        ]
-      },
-      {
-        elementType: 'labels',
-        stylers: [{visibility: 'on'}]
-      }
-    ], {
-      name: 'Custom Style'
-  });
-  var customMapTypeId = 'custom_style';
+			{
+				stylers: [
+					{ "saturation": -100 }
+				]
+			},
+			{
+				elementType: 'labels',
+				stylers: [{visibility: 'on'}]
+			}
+			],
+			{
+				name: 'Custom'
+			});
+			var customMapTypeId = 'custom_style';
 
 
 			var map = new google.maps.Map(document.getElementById('map'), {
@@ -128,43 +129,52 @@
 				zoom: 6,
 				scrollwheel: false,
 				mapTypeControlOptions: {
-		    mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-		    }
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+				}
 			});
+map.mapTypes.set(customMapTypeId, customMapType);
+				map.setMapTypeId(customMapTypeId);
+  var bounds = {
+    north: -25.363882,
+    south: -31.203405,
+    east: 131.044922,
+    west: 125.244141
+  };
 
-			map.mapTypes.set(customMapTypeId, customMapType);
-  		map.setMapTypeId(customMapTypeId);
+  // Display the area between the location southWest and northEast.
+  map.fitBounds(bounds);
 
-			var infoWindow = new google.maps.InfoWindow({map: map});
+  // Add 5 markers to map at random locations.
+  // For each of these markers, give them a title with their index, and when
+  // they are clicked they should open an infowindow with text from a secret
+  // message.
+  var secretMessages = ['This', 'is', 'the', 'secret', 'message'];
+  var lngSpan = bounds.east - bounds.west;
+  var latSpan = bounds.north - bounds.south;
+  for (var i = 0; i < secretMessages.length; ++i) {
+    var marker = new google.maps.Marker({
+      position: {
+        lat: bounds.south + latSpan * Math.random(),
+        lng: bounds.west + lngSpan * Math.random()
+      },
+      map: map
+    });
+    attachSecretMessage(marker, secretMessages[i]);
+  }
+}
 
+// Attaches an info window to a marker with the provided message. When the
+// marker is clicked, the info window will open with the secret message.
+function attachSecretMessage(marker, secretMessage) {
+  var infowindow = new google.maps.InfoWindow({
+    content: secretMessage
+  });
 
+  marker.addListener('click', function() {
+    infowindow.open(marker.get('map'), marker);
+  });
 
-			// Try HTML5 geolocation.
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
-					var pos = {
-						lat: position.coords.latitude,
-						lng: position.coords.longitude
-					};
-
-					infoWindow.setPosition(pos);
-					infoWindow.setContent('Location');
-					map.setCenter(pos);
-				}, function() {
-					handleLocationError(true, infoWindow, map.getCenter());
-				});
-			} else {
-				// Browser doesn't support Geolocation
-				handleLocationError(false, infoWindow, map.getCenter());
-			}
-		}
-
-		function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-			infoWindow.setPosition(pos);
-			infoWindow.setContent(browserHasGeolocation ?
-														'Error: The Geolocation service failed.' :
-														'Error: Your browser doesn\'t support geolocation.');
-		}
+}
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3wJfJ4DsP1Kooai4j96ZcQ8kWf5NHXTc&signed_in=true&callback=initMap"
@@ -179,171 +189,224 @@
 
 
 
-
-
-<article class="promo"> <!-- promo -->
-
+<article class="shops"> <!-- shops -->
+	<div class="container">
 		<div class="row">
 
-			<div class="col-xs-12 col-sm-6 promo--retail">
-				<figure class="promo__bg">
-					<div class="promo__img promo__img--retail"></div>
-				</figure>
-				<a href="#" class="promo__item">
-					<span class="promo__item__content">
-						<span class="promo__item__content__icon"></span>
-						<span class="promo__item__content__title">Retail</span>
-						<span class="promo__item__content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eius magnam repudiandae vel harum dolore consequuntur id tempore error, modi fugit odit pariatur omnis ducimus quis. Excepturi autem voluptate optio.</span>
-						<span class="promo__item__content__link">Перейти > </span>
-					</span>
-				</a>
+			<div class="col-xs-12">
+				<div class="info-block">
+					<h1>Shops</h1>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat doloremque laboriosam quasi voluptatem adipisci quos, quidem nostrum. Ipsa, fugit, dolorum! Doloribus distinctio sequi, mollitia debitis, dolores tempora ad impedit sunt, blanditiis commodi architecto facere, repudiandae inventore. Pariatur aspernatur eos iste assumenda, explicabo dolorem sint.</span>
+				</div>
+			</div>
+		</div><!-- Row -->
+
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Санкт-Петербург</span>
+				</div>
 			</div><!-- col -->
 
-			<div class="col-xs-12 col-sm-6 promo--wholesale">
-				<figure class="promo__bg">
-					<div class="promo__img promo__img--wholesale"></div>
-				</figure>
-				<a href="#" class="promo__item">
-					<span class="promo__item__content">
-						<span class="promo__item__content__icon"></span>
-						<span class="promo__item__content__title">Wholesale</span>
-						<span class="promo__item__content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam provident repudiandae iusto cum dolorem illo vero ipsum nostrum a dolore commodi aliquid, totam recusandae, et tenetur quibusdam placeat, minus. Consectetur!</span>
-						<span class="promo__item__content__link">Перейти > </span>
-					</span>
-				</a>
+			<div class="col-xs-12 col-sm-6">
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Богема</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Адриатика</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Джинс Лайн</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Мелдес</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">ТРК Заневский</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">ТРК Заневский</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
+
+
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Москва</span>
+				</div>
 			</div><!-- col -->
 
-		</div> <!-- row -->
+			<div class="col-xs-12 col-sm-6">
 
-</article> <!-- promo -->
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Салон NJ</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Адриатика</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Джинс Лайн</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Мелдес</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
-<div class="catalogue">
-	<div class="wrapper">
-		<div class="row">
-
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/1.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
-
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/2.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
-
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/3.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
-
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/4.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
-
-		</div><!-- row -->
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
 
 
-		<div class="row">
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Ростов на Дону</span>
+				</div>
+			</div><!-- col -->
 
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/5.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
+			<div class="col-xs-12 col-sm-6">
 
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/6.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Салон NJ</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/7.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Адриатика</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
-			<div class="catalogue__item col-xs-12 col-sm-6 col-lg-3">
-			<a href="#">
-				<figure class="catalogue__item__img">
-					<img src="../../img/images/clothes/8.jpg" alt="">
-				</figure>
-				<span class="catalogue__item__content">
-					<span class="catalogue__item__content__title">Lorem ipsum.</span>
-					<span class="catalogue__item__content__articulus"><small>Артикул: </small>123-3 13</span>
-				</span>
-				</a>
-			</div>
-
-		</div><!-- row -->
-	</div><!-- wrapper -->
-</div><!-- catalogue -->
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
 
 
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Сочи</span>
+				</div>
+			</div><!-- col -->
+
+			<div class="col-xs-12 col-sm-6">
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Салон NJ</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Адриатика</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Джинс Лайн</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Мелдес</span>
+						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
+						<span class="shops__list--phone">+7 812 374 42 12</span>
+						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+					</div>
+				</div>
 
 
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
 
-
-
-
-
-
-
-
-
-
-
-
+	</div><!-- container -->
+</article> <!-- shops -->
 
 
 
@@ -352,7 +415,7 @@
         </main>
 
         <footer class="footer">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-3">
         <div class="footer__text">
