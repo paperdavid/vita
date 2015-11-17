@@ -2875,29 +2875,29 @@ fieldset[disabled] .btn-success.active
 .btn-info
 {
     color: #fff;
-    border-color: #46b8da;
-    background-color: #5bc0de;
+    border-color: #141415;
+    background-color: #202122;
 }
 .btn-info:focus,
 .btn-info.focus
 {
     color: #fff;
-    border-color: #1b6d85;
-    background-color: #31b0d5;
+    border-color: #000;
+    background-color: #070708;
 }
 .btn-info:hover
 {
     color: #fff;
-    border-color: #269abc;
-    background-color: #31b0d5;
+    border-color: #000;
+    background-color: #070708;
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info
 {
     color: #fff;
-    border-color: #269abc;
-    background-color: #31b0d5;
+    border-color: #000;
+    background-color: #070708;
 }
 .btn-info:active:hover,
 .btn-info.active:hover,
@@ -2910,8 +2910,8 @@ fieldset[disabled] .btn-success.active
 .open > .dropdown-toggle.btn-info.focus
 {
     color: #fff;
-    border-color: #1b6d85;
-    background-color: #269abc;
+    border-color: #000;
+    background-color: #000;
 }
 .btn-info:active,
 .btn-info.active,
@@ -2938,12 +2938,12 @@ fieldset[disabled] .btn-info:active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active
 {
-    border-color: #46b8da;
-    background-color: #5bc0de;
+    border-color: #141415;
+    background-color: #202122;
 }
 .btn-info .badge
 {
-    color: #5bc0de;
+    color: #202122;
     background-color: #fff;
 }
 .btn-warning
@@ -4240,7 +4240,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     float: left;
 
     height: 50px;
-    padding: 15px 15px;
+    padding: 15px 0;
 }
 .navbar-brand:hover,
 .navbar-brand:focus
@@ -4532,7 +4532,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
 .navbar-default
 {
     border-color: none;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(20, 21, 22, .9);
 }
 .navbar-default .navbar-brand
 {
@@ -4563,7 +4563,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
 .navbar-default .navbar-nav > .active > a:focus
 {
     color: #555;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(4, 4, 5, .9);
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4595,7 +4595,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
 .navbar-default .navbar-nav > .open > a:focus
 {
     color: #555;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(4, 4, 5, .9);
 }
 @media (max-width: 767px)
 {
@@ -4614,7 +4614,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus
     {
         color: #555;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(4, 4, 5, .9);
     }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -5039,12 +5039,12 @@ a.label:focus
 }
 .label-info
 {
-    background-color: #5bc0de;
+    background-color: #202122;
 }
 .label-info[href]:hover,
 .label-info[href]:focus
 {
-    background-color: #31b0d5;
+    background-color: #070708;
 }
 .label-warning
 {
@@ -7552,6 +7552,18 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
         display: block;
     }
 }
+.inner
+{
+    margin: 5em 0;
+}
+.inner__top
+{
+    margin-top: 5em;
+}
+.inner__bottom
+{
+    margin-bottom: 7em;
+}
 .promo
 {
     position: relative;
@@ -7744,9 +7756,10 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .footer
 {
-    padding: 40px 0 30px;
+    padding: 90px 0 10px;
 
     color: #fff;
+    border-top: 1px solid #b88b58;
 }
 .footer a
 {
@@ -7758,11 +7771,46 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     color: #777;
 }
+.footer__text .h3
+{
+    font-weight: bold;
+    font-style: italic;
+
+    margin-bottom: 30px;
+
+    color: #b88b58;
+}
 .footer__list ul
 {
     padding-left: 0;
 
     list-style: none;
+}
+form.newsletter input
+{
+    display: block;
+
+    padding: 0;
+    padding-bottom: 4px;
+
+    border: none;
+    border-bottom: 1px solid #b88b58;
+    outline: none;
+    background: none;
+}
+form.newsletter input[type=submit]
+{
+    padding: 15px 0;
+
+    border-bottom: none;
+}
+form.newsletter input[type=submit]:hover
+{
+    color: #89643a;
+}
+form.newsletter input[placeholder]
+{
+    color: #b88b58;
 }
 .map-box
 {
@@ -7830,14 +7878,6 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 .shops__list--site
 {
     display: block;
-}
-.inner
-{
-    margin: 5em 0;
-}
-.inner__top
-{
-    margin-top: 5em;
 }
 .news__block
 {

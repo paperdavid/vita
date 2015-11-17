@@ -72,29 +72,35 @@
 
         <header>
 	<nav class="navbar navbar-default">
-		<div class="container-fluid">
+		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/">Vita Stretta</a>
-			</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="/">Vita Stretta</a>
+						</div>
+						</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">О компании</a></li>
-					<li><a href="">Каталог</a></li>
-					<li><a href="../../shops.html">Магазины</a></li>
-					<li><a href="../../news.html">Новости</a></li>
-					<li><a href="">Контакты</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="col-xs-12 col-sm-6">
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="../../about.html">О компании</a></li>
+								<li><a href="">Каталог</a></li>
+								<li><a href="../../shops.html">Магазины</a></li>
+								<li><a href="../../news.html">Новости</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</div>
+			</div>
 	</nav>
 </header>
         <main>
@@ -191,7 +197,7 @@ function attachSecretMessage(marker, secretMessage) {
 
 <article class="shops"> <!-- shops -->
 	<div class="container">
-		<div class="row">
+		<div class="row inner">
 
 			<div class="col-xs-12">
 				<div class="info-block">
@@ -415,53 +421,66 @@ function attachSecretMessage(marker, secretMessage) {
         </main>
 
         <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-3">
-        <div class="footer__text">
-          <p>© Vita Stretta 2015 <br>
-          Санкт-Петербург <br>
-          Россия</p>
-        </div>
-      </div>
+	<div class="container">
+		<div class="row inner__bottom">
+			<div class="col-xs-12 col-sm-3">
+				<div class="footer__text footer__list">
+					<p class="h3">Vita Stretta</p>
+					<ul>
+						<li><a href="">О компании</a></li>
+						<li><a href="">Каталог</a></li>
+						<li><a href="">Список магазинов</a></li>
+						<li><a href="">Новости</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+					
+				</div>
+			</div>
 
-      <div class="col-xs-12 col-sm-3">
-        <div class="footer__text footer__list">
-           <ul>
-            <li><a href="tel:792192192191">+7 921 933 92 12</a></li>
-            <li><a href="mailto:hello@vitastretta.ru">hvv@vitastretta.ru</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Vkontakte</a></li>
-          </ul>
-            <!-- <span class="social">
-            <a href=""><span class="vk"></span></a>
-            <a href=""><span class="instagram"></span></a>
-            </span> -->
-          </p>
-        </div>
-      </div> 
+			<div class="col-xs-12 col-sm-3">
+				<div class="footer__text footer__list">
+					<p class="h3">Адрес</p>
+					 <p>
+					Санкт-Петербург <br>
+					Россия</p>
+				</div>
+			</div> 
 
 
-      <div class="col-xs-12 col-sm-3">
-        <div class="footer__text footer__list">
-          <ul>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Каталог</a></li>
-            <li><a href="">Список магазинов</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </div>
-      </div>
+			<div class="col-xs-12 col-sm-3">
+				<div class="footer__text footer__list">
+				<p class="h3">Контакты</p>
+					<ul>
+						<li><a href="tel:792192192191">+7 921 933 92 12</a></li>
+						<li><a href="mailto:hello@vitastretta.ru">hvv@vitastretta.ru</a></li>
+						<li><a href="">Instagram</a></li>
+						<li><a href="">Vkontakte</a></li>
+					</ul>
+				</div>
+			</div>
 
-      <div class="col-xs-12 col-sm-3">
-        <div class="footer__text">
-          <p>Сделано в <a href="">The Vine</a></p>
-        </div>
-      </div>
+			<div class="col-xs-12 col-sm-3">
+				<div class="footer__text">
+					<p class="h3">Новости</p>
+					<form class="newsletter" action="#">
+						<input type="text" placeholder="Введите email">
+						<input type="submit" placeholder="Подписаться">
+					</form>
+				</div>
+			</div>
 
-    </div>
-  </div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-10">
+				<p>© 2015 Vita Stretta</p>
+			</div>
+			<div class="col-xs-12 col-sm-2 text-right">
+				<p>Сделано в <a href="">The Vine</a></p>
+			</div>
+		</div>
+
+	</div>
 </footer>
 
 <!-- JavaScript-->

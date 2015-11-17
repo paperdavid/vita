@@ -1,3 +1,16 @@
+.inner {
+	margin: 5em 0;
+
+	&__top {
+		margin-top: 5em;
+	}
+
+	&__bottom {
+		margin-bottom: 7em;
+	}
+}
+
+
 .promo {
 	position: relative;
 	width: 100%;
@@ -190,9 +203,10 @@
 
 
 .footer {
-	padding: 40px 0 30px;
+	border-top: 1px solid @link-color;
+	padding: 90px 0 10px;
 	color: #fff;
-		
+
 
 	& a {
 		color: #fff;
@@ -203,10 +217,43 @@
 		}
 	}
 
+	&__text .h3 {
+		margin-bottom: 30px;
+		font-weight: bold;
+		font-style: italic;
+		color: @brand-success;
+	}
 
 	&__list ul{
 		list-style: none;
 		padding-left: 0;
+	}
+}
+
+
+form.newsletter {
+	
+	input {
+		display: block;
+		padding: 0;
+		padding-bottom: 4px;
+		background: none;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid @link-color;
+	}
+
+	input[type=submit] {
+		border-bottom: none;
+		padding: 15px 0;
+
+		&:hover {
+			color: @link-hover-color;
+		}
+	}
+
+	input[placeholder] {
+		color: @brand-success;
 	}
 }
 
