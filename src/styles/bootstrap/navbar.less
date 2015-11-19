@@ -14,7 +14,7 @@
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
-  z-index: 1;
+  z-index: 999;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -659,4 +659,16 @@
       }
     }
   }
+}
+
+.navbar-nav>li>a {
+  padding-left: 0;
+}
+
+.navbar-nav>li {
+  margin-left: 15px;
+}
+
+.navbar-nav>li:first-child {
+  margin-left: 0;
 }

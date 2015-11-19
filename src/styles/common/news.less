@@ -4,7 +4,11 @@
 	&__block {
 		margin-top: 6em;
 
-		&--title {
+		&:last-child {
+			margin-bottom: 6em;
+		}
+
+		&--title {s
 			font-family: @font-family-serif;
 			font-style: italic;
 			font-weight: bold;
@@ -39,10 +43,85 @@
 
 			img {
 				margin-bottom: 1em;
+				border: 1px solid @brand-success;
 			}
 		}
 	}
 }
+
+
+
+.news-box {
+
+	&__content {
+		padding:3em 1.5em;
+		box-shadow: 0px 0px 0px 1px @body-bg;
+		background-color: @brand-info;
+		height:17em;
+		overflow: hidden;
+
+		&:hover {
+			background-color: @body-bg;
+		}
+
+		&__title {
+			font-family: @font-family-sans-serif;
+			color: @brand-success;
+			font-size: 2em;
+		}
+
+		&__date {
+			color: @gray-light;
+
+			& span {
+				display: inline-block;
+			}
+
+			& p {
+				display: inline-block;
+
+				&:before {
+				content: '|';
+				margin: 0 10px;
+				}
+			}
+		}
+
+		&__text {
+			display: block;
+			height: 4em;
+			overflow: hidden;
+
+			&:after {
+				content: '...';
+			}
+		}
+
+		&__link {
+			display: block;
+			width: 3em;
+			margin-top: 1em;
+
+			&:after {
+				content: '...';
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

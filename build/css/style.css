@@ -1931,6 +1931,13 @@ address
         margin-left: 0;
     }
 }
+@media (max-width: 767px)
+{
+    .container
+    {
+        padding: 0 15px;
+    }
+}
 fieldset
 {
     min-width: 0;
@@ -4090,7 +4097,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
 .navbar
 {
     position: fixed;
-    z-index: 1;
+    z-index: 999;
 
     width: 100%;
     min-height: 50px;
@@ -4774,6 +4781,18 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus
 {
     color: #444;
+}
+.navbar-nav > li > a
+{
+    padding-left: 0;
+}
+.navbar-nav > li
+{
+    margin-left: 15px;
+}
+.navbar-nav > li:first-child
+{
+    margin-left: 0;
 }
 .breadcrumb
 {
@@ -7300,79 +7319,6 @@ button.close
         display: none !important;
     }
 }
-/***************************************************/
-/* Set custom or change third-party Less variables */
-/***************************************************/
-/* Third party */
-/*
-LESS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: @icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
-
-At the bottom of this section, we provide information about the spritesheet itself
-@spritesheet: width height image @spritesheet-sprites;
-*/
-/*
-These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
-
-The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
-*/
-/*
-The provided classes are intended to be used with the array-like variables
-
-.icon-home {
-  .sprite-width(@icon-home);
-}
-.icon-email {
-  .sprite(@icon-email);
-}
-*/
-/*
-The `retina-sprite` class sets up rules and a media query for a sprite/retina sprite.
-  It should be used with a "retina group" variable.
-
-The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
-
-@icon-home-group: 'icon-home' @icon-home @icon-home-2x;
-
-.icon-home {
-  .retina-sprite(@icon-home-group);
-}
-*/
-/*
-The `.sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of LESS
-
-This must be run when you have at least 2 sprites.
-  If run with a single sprite, then there will be reference errors.
-
-.sprites(@spritesheet-sprites);
-*/
-/*
-The `.retina-sprites` mixin generates a CSS rule and media query for retina groups
-  This yields the same output as CSS retina template but can be overridden in LESS
-
-.retina-sprites(@retina-groups);
-*/
-.svg-sprite--icons
-{
-    width: 300px;
-    height: 40px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 300px 40px;
-}
-.no-svg .svg-sprite--icons
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
 .tilt
 {
     position: relative;
@@ -7554,15 +7500,15 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .inner
 {
-    margin: 5em 0;
+    padding: 5em 0;
 }
 .inner__top
 {
-    margin-top: 5em;
+    padding-top: 7em;
 }
 .inner__bottom
 {
-    margin-bottom: 7em;
+    padding-bottom: 7em;
 }
 .promo
 {
@@ -7614,7 +7560,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 .promo__item:hover
 {
     color: #fff;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .5);
 }
 .promo__item__content
 {
@@ -7627,8 +7573,10 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .promo__item__content__title
 {
+    font-family: Playfair Display, serif;
     font-size: 26px;
-    font-weight: 400;
+    font-weight: bold;
+    font-style: italic;
     line-height: 1.33;
 
     display: block;
@@ -7638,7 +7586,6 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     margin-bottom: 10px;
 
     letter-spacing: .04em;
-    text-transform: uppercase;
 }
 .promo__item__content__text
 {
@@ -7662,7 +7609,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .promo__item__content__link:hover
 {
-    color: #000;
+    color: #b88b58;
 }
 @media (max-width: 768px)
 {
@@ -7683,15 +7630,15 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     .promo
     {
-        height: 100vh;
+        height: 140vh;
     }
     .promo__img
     {
-        height: 50vh;
+        height: 70vh;
     }
     .promo__item
     {
-        height: 50vh;
+        height: 70vh;
     }
     .promo--retail
     {
@@ -7699,10 +7646,14 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     }
     .promo--wholesale
     {
-        top: 50vh;
+        top: 70vh;
+    }
+    .promo__item
+    {
+        background: rgba(0, 0, 0, .5);
     }
 }
-.wrapper
+.product
 {
     overflow: hidden;
 
@@ -7937,6 +7888,18 @@ form.newsletter input[placeholder]
         -ms-transform: scale(1.01);
             transform: scale(1.01);
 }
+hr
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    border-top: 1px solid #b88b58;
+}
+.map-box
+{
+    box-shadow: 0 1px 0 #b88b58;
+}
 .info-block h1
 {
     font-family: Playfair Display, serif;
@@ -7948,6 +7911,10 @@ form.newsletter input[placeholder]
 .info-block span
 {
     font-size: 2em;
+}
+.info-block p
+{
+    font-size: 1.4em;
 }
 .shops__city
 {
@@ -7994,13 +7961,18 @@ form.newsletter input[placeholder]
 {
     margin-top: 6em;
 }
+.news__block:last-child
+{
+    margin-bottom: 6em;
+}
 .news__block--title
 {
-    font-family: Playfair Display, serif;
     font-weight: bold;
     font-style: italic;
 
     color: #b88b58;
+
+    sfont-family: Playfair Display, serif;
 }
 .news__block--title--date
 {
@@ -8032,4 +8004,67 @@ form.newsletter input[placeholder]
 .news__block--text img
 {
     margin-bottom: 1em;
+
+    border: 1px solid #b88b58;
+}
+.news-box__content
+{
+    overflow: hidden;
+
+    height: 17em;
+    padding: 3em 1.5em;
+
+    background-color: #202122;
+    box-shadow: 0 0 0 1px #141516;
+}
+.news-box__content:hover
+{
+    background-color: #141516;
+}
+.news-box__content__title
+{
+    font-family: ProbaProRegular, sans-serif;
+    font-size: 2em;
+
+    color: #b88b58;
+}
+.news-box__content__date
+{
+    color: #777;
+}
+.news-box__content__date span
+{
+    display: inline-block;
+}
+.news-box__content__date p
+{
+    display: inline-block;
+}
+.news-box__content__date p:before
+{
+    margin: 0 10px;
+
+    content: '|';
+}
+.news-box__content__text
+{
+    display: block;
+    overflow: hidden;
+
+    height: 4em;
+}
+.news-box__content__text:after
+{
+    content: '...';
+}
+.news-box__content__link
+{
+    display: block;
+
+    width: 3em;
+    margin-top: 1em;
+}
+.news-box__content__link:after
+{
+    content: '...';
 }
