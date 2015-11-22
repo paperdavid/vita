@@ -247,8 +247,6 @@ gulp.task('build', function(callback) {
         'js',
         'less',
         'images',
-        'png-sprite',
-        'svg-sprite',
         'svg',
         'fonts',
         callback)
