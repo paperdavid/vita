@@ -7758,6 +7758,18 @@ button.close
     position: relative;
     z-index: 1;
 }
+.carousel-about .item img
+{
+    width: 100%;
+    height: auto;
+}
+.carousel-card .item img
+{
+    width: auto;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 52px;
+}
 .inner
 {
     padding: 5em 0;
@@ -8166,6 +8178,33 @@ hr
 
     border-top: 1px solid #b88b58;
 }
+.feedback
+{
+    padding: 2em 25%;
+
+    background-color: #202122;
+}
+.feedback h2
+{
+    margin-bottom: 2em;
+
+    text-align: center;
+}
+.feedback__content
+{
+    text-align: center;
+}
+.feedback__content__quote
+{
+    border: none;
+}
+@media (max-width: 760px)
+{
+    .feedback
+    {
+        padding: 1em 10%;
+    }
+}
 .map-box
 {
     box-shadow: 0 1px 0 #b88b58;
@@ -8434,13 +8473,6 @@ hr
 
         text-align: left;
     }
-}
-.owl-carousel .item img
-{
-    width: auto;
-    height: 100vh;
-    margin: 0 auto;
-    padding-top: 52px;
 }
 .materials
 {

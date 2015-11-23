@@ -10,7 +10,7 @@ $(document).ready(function() {
 		//= ./common/owl.carousel.min.js
 
 
-		$('.owl-carousel').owlCarousel({
+		$('.carousel-card').owlCarousel({
 			loop:true,
 			margin:100,
 			nav:false,
@@ -26,6 +26,32 @@ $(document).ready(function() {
 							items:1
 					}
 			}
+		})
+
+		$('.carousel-about').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:false,
+			autoplay: 500,
+			responsive:{
+					0:{
+							items:1
+					},
+					600:{
+							items:1
+					},
+					1000:{
+							items:2
+					}
+			}
+		})
+
+		$('.carousel-feedback').owlCarousel({
+			loop:true,
+			nav:false,
+			autoplay: 100,
+			autoplayHoverPause: true,
+			items: 1
 		})
 
 });
