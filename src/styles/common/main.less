@@ -437,8 +437,7 @@ img {
 .form {
 
 	&__title {
-		padding-top: 1em;
-		border-top: 1px solid rgba(255, 255, 255, .2);
+
 
 		& span {
 			font-size: 2em;
@@ -455,8 +454,6 @@ img {
 	}
 
 	#fields {
-		padding-top: 1em;
-		border-top: 1px solid rgba(255, 255, 255, .2);
 	}
 
 	input {
@@ -500,10 +497,14 @@ img {
 }
 
 
+.buy {
+	color: @brand-success!important;
 
-
-
-
+	&:hover{
+		text-decoration: none;
+		color: @brand-success-light!important;
+	}
+}
 
 
 
