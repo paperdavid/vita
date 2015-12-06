@@ -77,14 +77,14 @@
 				line-height: 1.33;
 				letter-spacing: .04em;
 				margin: 0 auto;
-				max-width: 300px;
+				max-width: 310px;
 				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 			}
 
 			&__text {
 				display: block;
 				margin: 0 auto;
-				max-width: 300px;
+				max-width: 310px;
 				font-size: 14px;
 				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 			}
@@ -92,7 +92,7 @@
 			&__link {
 				display: block;
 				margin: 20px auto;
-				max-width: 300px;
+				max-width: 310px;
 				font-size: 18px;
 				z-index: 12;
 				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -193,6 +193,7 @@ form.newsletter {
 		background: none;
 		outline: none;
 		border: none;
+		border-radius: 0;
 		border-bottom: 1px solid @link-color;
 	}
 
@@ -221,25 +222,6 @@ form.newsletter {
 	height: 500px; 
 	padding: 0; 
 	margin: 0;
-}
-
-
-
-
-
-
-.materials {
-	width: 100px;
-	height: 100px;
-	display: inline-block;
-	border: 3px solid #fff;
-	border-radius: 50px;
-
-
-	&--brown {
-		background-image: url(.);
-	}
-
 }
 
 
@@ -499,17 +481,126 @@ img {
 
 .buy {
 	color: @brand-success!important;
+}
 
-	&:hover{
-		text-decoration: none;
-		color: @brand-success-light!important;
+
+i.arrow {
+	display: inline-block;
+	font-family: @font-family-serif;
+	font-style: italic;
+	font-size: 14px;
+}
+
+
+a.instagram {
+	&:hover {
+		color: #3f729b;
+	}
+}
+
+a.vk {
+	&:hover {
+		color: #45668e;
+	}
+}
+
+a.facebook {
+	&:hover {
+		color: #3b5998;
 	}
 }
 
 
+///////////////////////////////////////////////////////////////
 
 
 
+#chessboard {
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
+/* Filters */
+#filters {
+  color: #b0b0b0;
+  font-size: 12px;
+  padding: 65px 0 0 0;
+}
+
+#filters a {
+  color: #2e3032;
+  margin-left: 0;
+  margin-right: 0;
+  text-decoration: none;
+  transition: all .2s ease-out;
+  font-size: 11px;
+}
+
+#filters a:hover,
+#filters a.active {
+  color: #d37070;
+}
+/* Sortlist */
+
+#sortlist {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 1.5em auto;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#sortlist li {
+  position: absolute;
+  width: 25%;
+  height: 300px;
+  display: block;
+  font-size: 3.2em;
+  line-height: 1.6em;
+  overflow: hidden;
+  color: #868686;
+  background-color: #E9E9E9;
+  box-shadow: inset 0px 0px 0px 1px #CECECE;
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#sortlist > li:hover {
+  color: #D17E7E;
+}
+
+/* Creating the chessboard */
+#sortlist li:nth-child(-2n+8),
+#sortlist li:nth-child(8) ~ li:nth-child(-2n+15),
+#sortlist li:nth-child(16) ~ li:nth-child(-2n+24),
+#sortlist li:nth-child(24) ~ li:nth-child(-2n+31),
+#sortlist li:nth-child(32) ~ li:nth-child(-2n+40),
+#sortlist li:nth-child(40) ~ li:nth-child(-2n+47),
+#sortlist li:nth-child(48) ~ li:nth-child(-2n+56),
+#sortlist li:nth-child(56) ~ li:nth-child(-2n+63) {
+  background-color: white;
+}
+
+#sortlist.filtered > li {
+  color: #D17E7E;
+  background-color: white;
+}
+
+.link {
+  font-size: 11px;
+  display: block;
+  padding: 2em 0;
+}
+
+.link a {
+  color: #2e3032;
+}
 
 

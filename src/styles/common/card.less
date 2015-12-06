@@ -50,7 +50,6 @@
 					display: inline-block;
 					margin-right: 15px;
 					margin-top: 15px;
-
 				}
 			}
 		}
@@ -71,8 +70,49 @@
 				padding: 5% 15px;
 				height: auto;
 				text-align: left;
+
+				&__title {
+					max-width: 100px;
+				}
 			}
 		}
 	}
+}
+/** Controls **/
+.controls {
+  padding:0.5em 1em 0.5em 1em;
+  background: @brand-success;
+  height: 50px;
+  line-height: 35px;
+}
+
+.filter, .controlslayout label{
+  border: none;
+  	&:hover {
+  		color: #000;
+  	}
+}
+
+button, .button {
+  margin-bottom:0.5em;
+  outline:none;
+  background: none;
+  padding: 0 1.8em;
+  font-family: @font-family-serif;
+  font-style: italic;
+
+}
+
+
+.controls button.active, + label{
+}
+
+/** Container **/
+#Container .mix {
+  display:none;
+}
+
+#Container .large-block-grid-5>li:nth-of-type(5n+1), #Container .large-block-grid-5>li:nth-of-type(1n){
+  clear:none;
 }
 

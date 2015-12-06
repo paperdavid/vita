@@ -7859,7 +7859,7 @@ button.close
 
     display: block;
 
-    max-width: 300px;
+    max-width: 310px;
     margin: 0 auto;
     margin-bottom: 10px;
 
@@ -7873,7 +7873,7 @@ button.close
 
     display: block;
 
-    max-width: 300px;
+    max-width: 310px;
     margin: 0 auto;
 
     text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
@@ -7886,7 +7886,7 @@ button.close
 
     display: block;
 
-    max-width: 300px;
+    max-width: 310px;
     margin: 20px auto;
 
     text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
@@ -7984,6 +7984,7 @@ form.newsletter input
 
     border: none;
     border-bottom: 1px solid #b88b58;
+    border-radius: 0;
     outline: none;
     background: none;
 }
@@ -8014,20 +8015,6 @@ form.newsletter input[placeholder]
     height: 500px;
     margin: 0;
     padding: 0;
-}
-.materials
-{
-    display: inline-block;
-
-    width: 100px;
-    height: 100px;
-
-    border: 3px solid #fff;
-    border-radius: 50px;
-}
-.materials--brown
-{
-    background-image: url();
 }
 .product-card
 {
@@ -8269,11 +8256,128 @@ img
 {
     color: #b88b58 !important;
 }
-.buy:hover
+i.arrow
 {
+    font-family: Playfair Display, serif;
+    font-size: 14px;
+    font-style: italic;
+
+    display: inline-block;
+}
+a.instagram:hover
+{
+    color: #3f729b;
+}
+a.vk:hover
+{
+    color: #45668e;
+}
+a.facebook:hover
+{
+    color: #3b5998;
+}
+#chessboard
+{
+    position: relative;
+
+    overflow: hidden;
+
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* Filters */
+#filters
+{
+    font-size: 12px;
+
+    padding: 65px 0 0 0;
+
+    color: #b0b0b0;
+}
+#filters a
+{
+    font-size: 11px;
+
+    margin-right: 0;
+    margin-left: 0;
+
+    -webkit-transition: all .2s ease-out;
+            transition: all .2s ease-out;
     text-decoration: none;
 
-    color: rgba(184, 139, 88, .4) !important;
+    color: #2e3032;
+}
+#filters a:hover,
+#filters a.active
+{
+    color: #d37070;
+}
+/* Sortlist */
+#sortlist
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 1.5em auto;
+    padding: 0;
+
+    -webkit-transition: all .4s ease-out;
+            transition: all .4s ease-out;
+}
+#sortlist li
+{
+    font-size: 3.2em;
+    line-height: 1.6em;
+
+    position: absolute;
+
+    display: block;
+    overflow: hidden;
+
+    width: 25%;
+    height: 300px;
+
+    -webkit-transition: all .4s ease-out;
+            transition: all .4s ease-out;
+
+    color: #868686;
+    background-color: #e9e9e9;
+    box-shadow: inset 0 0 0 1px #cecece;
+}
+#sortlist > li:hover
+{
+    color: #d17e7e;
+}
+/* Creating the chessboard */
+#sortlist li:nth-child(-2n+8),
+#sortlist li:nth-child(8) ~ li:nth-child(-2n+15),
+#sortlist li:nth-child(16) ~ li:nth-child(-2n+24),
+#sortlist li:nth-child(24) ~ li:nth-child(-2n+31),
+#sortlist li:nth-child(32) ~ li:nth-child(-2n+40),
+#sortlist li:nth-child(40) ~ li:nth-child(-2n+47),
+#sortlist li:nth-child(48) ~ li:nth-child(-2n+56),
+#sortlist li:nth-child(56) ~ li:nth-child(-2n+63)
+{
+    background-color: white;
+}
+#sortlist.filtered > li
+{
+    color: #d17e7e;
+    background-color: white;
+}
+.link
+{
+    font-size: 11px;
+
+    display: block;
+
+    padding: 2em 0;
+}
+.link a
+{
+    color: #2e3032;
 }
 .map-box
 {
@@ -8583,6 +8687,52 @@ img
 
         text-align: left;
     }
+    .card__item__content__title
+    {
+        max-width: 100px;
+    }
+}
+/** Controls **/
+.controls
+{
+    line-height: 35px;
+
+    height: 50px;
+    padding: .5em 1em .5em 1em;
+
+    background: #b88b58;
+}
+.filter,
+.controlslayout label
+{
+    border: none;
+}
+.filter:hover,
+.controlslayout label:hover
+{
+    color: #000;
+}
+button,
+.button
+{
+    font-family: Playfair Display, serif;
+    font-style: italic;
+
+    margin-bottom: .5em;
+    padding: 0 1.8em;
+
+    outline: none;
+    background: none;
+}
+/** Container **/
+#Container .mix
+{
+    display: none;
+}
+#Container .large-block-grid-5 > li:nth-of-type(5n+1),
+#Container .large-block-grid-5 > li:nth-of-type(1n)
+{
+    clear: none;
 }
 .materials
 {

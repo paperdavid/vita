@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
 
     <head>
-    <title>Vita Stretta</title>
+    <title>Vita Stretta — Магазин женской одежды</title>
 
     <!-- Main Meta information-->
     <meta charset="utf-8">
@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
     <meta name="keywords" content="gulp,html,html5,css,css3,js,javascript,jquery,frontend,front-end">
-    <meta name="description" content="Front-End Projects start boilerplate.">
+    <meta name="description" content="Vita Stretta — Магазин женской одежды">
     <meta name="author" content="David Mekerishvili">
 
     <!-- Meta Information -->
     <meta name="robots" content="index, follow">
     <meta name="language" content="Russian">
-    <meta name="application-name" content="Template">
+    <meta name="application-name" content="Vita Stretta — Магазин женской одежды">
     <meta name="msapplication-tooltip" content="Template">
     <meta name="msapplication-starturl" content="Template">
 
@@ -69,7 +69,7 @@
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="row">
-						<div class="col-xs-12 col-sm-6">
+						<div class="col-xs-12 col-sm-3 col-lg-6">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 								<span class="sr-only">Toggle navigation</span>
@@ -77,15 +77,17 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="/">Vita Stretta</a>
+							<a class="navbar-brand" href="/">
+								<img src="../../img/svg/logo.svg" height="16px" alt="">
+							</a>
 						</div>
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="col-xs-12 col-sm-6">
+						<div class="col-xs-12 col-sm-9 col-lg-6">
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="../../about.html">О компании</a></li>
+								<li><a href="../../about.html">О марке</a></li>
 								<li><a href="../../catalogue.html">Каталог</a></li>
 								<li><a href="../../shops.html">Магазины</a></li>
 								<li><a href="../../news.html">Новости</a></li>
@@ -296,11 +298,11 @@
 				<div class="footer__text footer__list">
 					<p class="h3">Vita Stretta</p>
 					<ul>
-						<li><a href="">О компании</a></li>
-						<li><a href="">Каталог</a></li>
-						<li><a href="">Список магазинов</a></li>
-						<li><a href="">Новости</a></li>
-						<li><a href="">Контакты</a></li>
+						<li><a href="../../about.html">О марке</a></li>
+						<li><a href="../../catalogue.html">Коллекция</a></li>
+						<li><a href="../../shops.html">Где купить</a></li>
+						<li><a href="../../news.html">Новости</a></li>
+						<li><a href="../../contacts.html">Контакты</a></li>
 					</ul>
 					
 				</div>
@@ -309,9 +311,9 @@
 			<div class="col-xs-12 col-sm-3">
 				<div class="footer__text footer__list">
 					<p class="h3">Адрес</p>
-					 <p>
+					 <p>Чкаловский проспект, д.&nbsp;50 <br>
 					Санкт-Петербург <br>
-					Россия</p>
+					Россия, 197022</p>
 				</div>
 			</div> 
 
@@ -322,9 +324,9 @@
 					<ul>
 						<li><a href="tel:+78123464186">+7 812 346 41 86</a></li>
 						<li><a href="mailto:hello@vitastretta.ru">office@vitastretta.ru</a></li>
-						<li><a href="">Instagram</a></li>
-						<li><a href="">Vkontakte</a></li>
-						<li><a href="">Facebook</a></li>
+						<li><a href="https://www.instagram.com/vita_stretta/" class="instagram" target="_blank">Instagram</a></li>
+						<li><a href="https://vk.com/vitastretta" class="vk" target="_blank">Vkontakte</a></li>
+						<li><a href="https://www.facebook.com/VitaStretta/" class="facebook" target="_blank">Facebook</a></li>
 					</ul>
 				</div>
 			</div>
@@ -332,10 +334,11 @@
 			<div class="col-xs-12 col-sm-3">
 				<div class="footer__text">
 					<p class="h3">Новости</p>
-					<form class="newsletter" action="#">
-						<input type="text" placeholder="Email для подписки">
-						<input type="submit">
+					<form class="newsletter" id="newsletter">
+						<input type="text" name="text" placeholder="Введите email">
+						<input type="submit" name="submit" id="newsletter-btn" value="Подписаться на новости &rarr;">
 					</form>
+					<div id="newsletter-note"></div>
 				</div>
 			</div>
 
@@ -346,7 +349,7 @@
 				<p>© 2015 Vita Stretta</p>
 			</div>
 			<div class="col-xs-6 col-sm-2 text-right">
-				<p>Сделано в <a href="">The Vine</a></p>
+				<p>Сделано в <a href="http://www.the-vine.ru">The Vine</a></p>
 			</div>
 		</div>
 

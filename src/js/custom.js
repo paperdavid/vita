@@ -8,8 +8,17 @@ $(document).ready(function() {
 
 		//= ./common/tiltfx.js
 		//= ./common/owl.carousel.min.js
+		//= ./common/newsletter.js
+		//= ./common/mixitup.js
 
 
+//////////////////////////////////
+$(function(){
+ $('#Container').mixItUp();
+ });
+
+
+//////////////////////////////////
 		$('.carousel-card').owlCarousel({
 			loop:true,
 			margin:100,

@@ -1,0 +1,40 @@
+{
+  "name": "Sortboard",
+  "version": "1.0.4",
+  "homepage": "https://github.com/joseluisq/sortboardjs",
+  "authors": [
+    "Jose Luis Quintana <joseluisquintana20@gmail.com>"
+  ],
+  "description": "Easy sorting and filtering of elements.",
+  "main": "sortboard.js",
+  "moduleType": [
+    "global"
+  ],
+  "keywords": [
+    "grid",
+    "sort",
+    "filter",
+    "sortlist",
+    "filterlist",
+    "responsive",
+    "jquery-plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.4",
+    "commit": "c1d928de1b2530e0881774f631986fa7bb84d0c2"
+  },
+  "_source": "git://github.com/joseluisq/sortboardjs.git",
+  "_target": "~1.0.4",
+  "_originalSource": "sortboard",
+  "_direct": true
+}

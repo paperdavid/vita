@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
 
     <head>
-    <title>Vita Stretta</title>
+    <title>Vita Stretta — Магазин женской одежды</title>
 
     <!-- Main Meta information-->
     <meta charset="utf-8">
@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
     <meta name="keywords" content="gulp,html,html5,css,css3,js,javascript,jquery,frontend,front-end">
-    <meta name="description" content="Front-End Projects start boilerplate.">
+    <meta name="description" content="Vita Stretta — Магазин женской одежды">
     <meta name="author" content="David Mekerishvili">
 
     <!-- Meta Information -->
     <meta name="robots" content="index, follow">
     <meta name="language" content="Russian">
-    <meta name="application-name" content="Template">
+    <meta name="application-name" content="Vita Stretta — Магазин женской одежды">
     <meta name="msapplication-tooltip" content="Template">
     <meta name="msapplication-starturl" content="Template">
 
@@ -69,7 +69,7 @@
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="row">
-						<div class="col-xs-12 col-sm-6">
+						<div class="col-xs-12 col-sm-3 col-lg-6">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 								<span class="sr-only">Toggle navigation</span>
@@ -77,15 +77,17 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="/">Vita Stretta</a>
+							<a class="navbar-brand" href="/">
+								<img src="../../img/svg/logo.svg" height="16px" alt="">
+							</a>
 						</div>
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="col-xs-12 col-sm-6">
+						<div class="col-xs-12 col-sm-9 col-lg-6">
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="../../about.html">О компании</a></li>
+								<li><a href="../../about.html">О марке</a></li>
 								<li><a href="../../catalogue.html">Каталог</a></li>
 								<li><a href="../../shops.html">Магазины</a></li>
 								<li><a href="../../news.html">Новости</a></li>
@@ -99,246 +101,263 @@
 			</div>
 	</nav>
 </header>
-        <main>
-        	<div class="product">
-		<div class="row inner__header">
+        <main class="inner__header">
+        <!--filter bar -->
+<div class="row">
+  <div class="col-xs-12">
+    <fieldset class="controls">
+      <div class="row">
+        <!-- filter buttons -->
+        <div class="col-xs-12" id="controlsfilter">
+          <label>Показать:</label>
+					<button class="filter tiny round active" data-filter="all">Все</button>
+					<button class="filter tiny round" data-filter=".trousers">Брюки</button>
+					<button class="filter tiny round" data-filter=".dress">Платья</button>
+					<button class="filter tiny round" data-filter=".blouse">Блузы</button>
+					<button class="filter tiny round" data-filter=".cardigan">Кардиганы</button>
+					<button class="filter tiny round" data-filter=".hoody">Свитшоты</button>
+					<button class="filter tiny round" data-filter=".skirt">Юбки</button>
+					<button class="filter tiny round" data-filter=".jacket">Жакеты</button>
+					<button class="filter tiny round" data-filter=".scarf">Шарфы и шапки</button>
+					<button class="filter tiny round" data-filter=".coat">Пальто</button>
+					<button class="filter tiny round" data-filter=".tunic">Туники</button>
+					<button class="filter tiny round" data-filter=".overall">Комбинезоны</button>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
 
+	<div class="catalogue filter" id="Container">
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="../../card.html">
-					<img class="" src="../../img/images/clothes/1.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/2.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/3.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/4.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/5.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/6.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/7.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/8.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-
-	</div><!-- row -->
-
+	<div class="wrapper">
 		<div class="row">
 
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix trousers product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="1">
 				<a class="product-card__link" href="../../card.html">
 					<img class="" src="../../img/images/clothes/1.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Брюки</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix dress product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="2">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/2.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Платье</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix blouse product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="3">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/3.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Блузка</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix cardigan product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="4">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/4.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Кардиган</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix hoody product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="5">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/5.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Свитшот</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix skirt product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="6">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/6.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Юбка</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix jacket product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="7">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/7.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Жакет</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix scarf product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="8">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/8.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Шарф</span>
 					</div>
 				</a>
 			</div>
 
 
-	</div><!-- row -->
-
-		<div class="row">
 
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix coat product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="9">
 				<a class="product-card__link" href="../../card.html">
 					<img class="" src="../../img/images/clothes/1.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Пальто</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix tunic product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="10">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/2.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Туника</span>
 					</div>
 				</a>
 			</div>
 
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/3.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/4.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/5.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/6.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
-				<a class="product-card__link" href="#">
-					<img class="" src="../../img/images/clothes/7.jpg" alt="">
-					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="product-card col-xs-12 col-sm-6 col-lg-3">
+			<div class="mix overall product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="11">
 				<a class="product-card__link" href="#">
 					<img class="" src="../../img/images/clothes/8.jpg" alt="">
 					<div class="product-card__content">
-						<span class="product-card__title">Lorem ipsum</span>
+						<span class="product-card__title">Комбинезон</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix trousers product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="12">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/3.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Брюки</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix dress product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="13">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/4.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Платье</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix cardigan product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="14">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/5.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Кардиган</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix skirt product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="15">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/6.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Юбка</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix scarf product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="16">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/7.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Шарф</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix coat product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="17">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/8.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Пальто</span>
 					</div>
 				</a>
 			</div>
 
 
+
+			<div class="mix overall product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="18">
+				<a class="product-card__link" href="../../card.html">
+					<img class="" src="../../img/images/clothes/1.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Комбинезон</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix trousers product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="19">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/2.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Брюки</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix blouse product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="20">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/3.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Блузка</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix hoody product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="21">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/4.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Свитшот</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix jacket product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="22">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/5.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Жакет</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix blouse product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="23">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/6.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Блузка</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="mix scarf product-card col-xs-12 col-sm-6 col-lg-3" data-myorder="24">
+				<a class="product-card__link" href="#">
+					<img class="" src="../../img/images/clothes/7.jpg" alt="">
+					<div class="product-card__content">
+						<span class="product-card__title">Шарф</span>
+					</div>
+				</a>
+			</div>
+		
+		</div><!-- grid -->
+
 	</div><!-- row -->
-	</div><!-- product -->
-
-
-
-
+</div>
 
 
 
@@ -353,11 +372,11 @@
 				<div class="footer__text footer__list">
 					<p class="h3">Vita Stretta</p>
 					<ul>
-						<li><a href="">О компании</a></li>
-						<li><a href="">Каталог</a></li>
-						<li><a href="">Список магазинов</a></li>
-						<li><a href="">Новости</a></li>
-						<li><a href="">Контакты</a></li>
+						<li><a href="../../about.html">О марке</a></li>
+						<li><a href="../../catalogue.html">Коллекция</a></li>
+						<li><a href="../../shops.html">Где купить</a></li>
+						<li><a href="../../news.html">Новости</a></li>
+						<li><a href="../../contacts.html">Контакты</a></li>
 					</ul>
 					
 				</div>
@@ -366,9 +385,9 @@
 			<div class="col-xs-12 col-sm-3">
 				<div class="footer__text footer__list">
 					<p class="h3">Адрес</p>
-					 <p>
+					 <p>Чкаловский проспект, д.&nbsp;50 <br>
 					Санкт-Петербург <br>
-					Россия</p>
+					Россия, 197022</p>
 				</div>
 			</div> 
 
@@ -379,9 +398,9 @@
 					<ul>
 						<li><a href="tel:+78123464186">+7 812 346 41 86</a></li>
 						<li><a href="mailto:hello@vitastretta.ru">office@vitastretta.ru</a></li>
-						<li><a href="">Instagram</a></li>
-						<li><a href="">Vkontakte</a></li>
-						<li><a href="">Facebook</a></li>
+						<li><a href="https://www.instagram.com/vita_stretta/" class="instagram" target="_blank">Instagram</a></li>
+						<li><a href="https://vk.com/vitastretta" class="vk" target="_blank">Vkontakte</a></li>
+						<li><a href="https://www.facebook.com/VitaStretta/" class="facebook" target="_blank">Facebook</a></li>
 					</ul>
 				</div>
 			</div>
@@ -389,10 +408,11 @@
 			<div class="col-xs-12 col-sm-3">
 				<div class="footer__text">
 					<p class="h3">Новости</p>
-					<form class="newsletter" action="#">
-						<input type="text" placeholder="Email для подписки">
-						<input type="submit">
+					<form class="newsletter" id="newsletter">
+						<input type="text" name="text" placeholder="Введите email">
+						<input type="submit" name="submit" id="newsletter-btn" value="Подписаться на новости &rarr;">
 					</form>
+					<div id="newsletter-note"></div>
 				</div>
 			</div>
 
@@ -403,7 +423,7 @@
 				<p>© 2015 Vita Stretta</p>
 			</div>
 			<div class="col-xs-6 col-sm-2 text-right">
-				<p>Сделано в <a href="">The Vine</a></p>
+				<p>Сделано в <a href="http://www.the-vine.ru">The Vine</a></p>
 			</div>
 		</div>
 
