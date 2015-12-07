@@ -8669,6 +8669,52 @@ a.facebook:hover
     margin-top: 15px;
     margin-right: 15px;
 }
+/** Controls **/
+.controls
+{
+    line-height: 35px;
+
+    padding: .5em 1em .5em 1em;
+
+    text-align: center;
+
+    background: #b88b58;
+}
+.filter,
+.controlslayout label
+{
+    border: none;
+}
+.filter:hover,
+.controlslayout label:hover
+{
+    color: #000;
+}
+button,
+.button
+{
+    font-family: Playfair Display, serif;
+    font-style: italic;
+
+    padding: 0 1.8em;
+
+    outline: none;
+    background: none;
+}
+.controls button.active
+{
+    color: #000;
+}
+/** Container **/
+#Container .mix
+{
+    display: none;
+}
+#Container .large-block-grid-5 > li:nth-of-type(5n+1),
+#Container .large-block-grid-5 > li:nth-of-type(1n)
+{
+    clear: none;
+}
 @media (max-width: 800px)
 {
     .card
@@ -8691,48 +8737,15 @@ a.facebook:hover
     {
         max-width: 100px;
     }
-}
-/** Controls **/
-.controls
-{
-    line-height: 35px;
-
-    height: 50px;
-    padding: .5em 1em .5em 1em;
-
-    background: #b88b58;
-}
-.filter,
-.controlslayout label
-{
-    border: none;
-}
-.filter:hover,
-.controlslayout label:hover
-{
-    color: #000;
-}
-button,
-.button
-{
-    font-family: Playfair Display, serif;
-    font-style: italic;
-
-    margin-bottom: .5em;
-    padding: 0 1.8em;
-
-    outline: none;
-    background: none;
-}
-/** Container **/
-#Container .mix
-{
-    display: none;
-}
-#Container .large-block-grid-5 > li:nth-of-type(5n+1),
-#Container .large-block-grid-5 > li:nth-of-type(1n)
-{
-    clear: none;
+    button,
+    .button
+    {
+        padding: 0 1em;
+    }
+    .controls
+    {
+        padding: .5em 0;
+    }
 }
 .materials
 {
