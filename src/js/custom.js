@@ -9,13 +9,14 @@ $(document).ready(function() {
 		//= ./common/tiltfx.js
 		//= ./common/owl.carousel.min.js
 		//= ./common/newsletter.js
+		//= ./common/wholesale.js
 		//= ./common/mixitup.js
 
 
 //////////////////////////////////
-$(function(){
- $('#Container').mixItUp();
- });
+	$(function(){
+	 $('#Container').mixItUp();
+	 });
 
 
 //////////////////////////////////

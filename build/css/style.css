@@ -7489,6 +7489,10 @@ button.close
 }
 @media screen and (max-width: 40em)
 {
+    .banner
+    {
+        height: calc(100vh - 70px);
+    }
     .banner h1
     {
         font-size: 2.5em;
@@ -8191,7 +8195,7 @@ hr
 {
     .feedback
     {
-        padding: 1em 10%;
+        padding: 1em 5%;
     }
 }
 img
@@ -8220,6 +8224,7 @@ img
 
     border: none;
     border-bottom: 1px solid rgba(184, 139, 88, .4);
+    border-radius: 0;
     outline: none;
     background: #202122;
 }
@@ -8234,6 +8239,7 @@ img
 
     border: none;
     border-bottom: 1px solid rgba(184, 139, 88, .4);
+    border-radius: 0;
     outline: none;
     background: #202122;
 }
@@ -8255,6 +8261,12 @@ img
 .buy
 {
     color: #b88b58 !important;
+}
+.serif
+{
+    font-family: Playfair Display, serif;
+    font-weight: bold;
+    font-style: italic;
 }
 i.arrow
 {
