@@ -107,74 +107,140 @@
 	<div id="map"></div>
 	<script>
 
-		function initMap() {
+function initMap() {
+	  var customMapType = new google.maps.StyledMapType([
+      {
+        stylers: [
+          {saturation: -100 }
+        ]
+      }
+    ], {
+      name: 'Custom Style'
+  });
+  var customMapTypeId = 'custom_style';
 
-			var customMapType = new google.maps.StyledMapType([
-			{
-				stylers: [
-					{ "saturation": -100 }
-				]
-			},
-			{
-				elementType: 'labels',
-				stylers: [{visibility: 'on'}]
-			}
-			],
-			{
-				name: 'Custom'
-			});
-			var customMapTypeId = 'custom_style';
+  var myLatLng = {lat: 55.751792, lng: 37.644832};
 
-
-			var map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: -34.397, lng: 150.644},
-				zoom: 6,
-				scrollwheel: false,
-				mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-				}
-			});
-map.mapTypes.set(customMapTypeId, customMapType);
-				map.setMapTypeId(customMapTypeId);
-  var bounds = {
-    north: -25.363882,
-    south: -31.203405,
-    east: 131.044922,
-    west: 125.244141
-  };
-
-  // Display the area between the location southWest and northEast.
-  map.fitBounds(bounds);
-
-  // Add 5 markers to map at random locations.
-  // For each of these markers, give them a title with their index, and when
-  // they are clicked they should open an infowindow with text from a secret
-  // message.
-  var secretMessages = ['This', 'is', 'the', 'secret', 'message'];
-  var lngSpan = bounds.east - bounds.west;
-  var latSpan = bounds.north - bounds.south;
-  for (var i = 0; i < secretMessages.length; ++i) {
-    var marker = new google.maps.Marker({
-      position: {
-        lat: bounds.south + latSpan * Math.random(),
-        lng: bounds.west + lngSpan * Math.random()
-      },
-      map: map
-    });
-    attachSecretMessage(marker, secretMessages[i]);
-  }
-}
-
-// Attaches an info window to a marker with the provided message. When the
-// marker is clicked, the info window will open with the secret message.
-function attachSecretMessage(marker, secretMessage) {
-  var infowindow = new google.maps.InfoWindow({
-    content: secretMessage
+  // Create a map object and specify the DOM element for display.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    scrollwheel: false,
+    zoom: 4,
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+    }
   });
 
-  marker.addListener('click', function() {
-    infowindow.open(marker.get('map'), marker);
+  map.mapTypes.set(customMapTypeId, customMapType);
+  map.setMapTypeId(customMapTypeId);
+
+  // Питер
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 60.005806, lng: 30.261997},
+    title: 'Bogema'
   });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 60.052501, lng: 30.311977},
+    title: 'Bogema'
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.986652, lng: 30.204082},
+    title: 'Bogema'
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.933486, lng: 30.438518},
+    title: 'Coconuda'
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.853710, lng: 30.349698},
+    title: 'Adriatica'
+  });
+
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.965355, lng: 30.345048},
+    title: 'Spirito Giovane Antiboutique'
+  });
+
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.965489, lng: 30.297962},
+    title: 'Jeans line'
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.752974, lng: 30.563970},
+    title: 'СЕВЕРИНА'
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.702215, lng: 30.381467},
+    title: 'Ma’Cherie'
+  });
+
+
+//////////Москва
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 55.665042, lng: 37.481830},
+    title: 'Салон NJ'
+  });
+
+//////////Вязьма
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 55.206132, lng: 34.297640},
+    title: 'Дамское счастье'
+  });
+
+//////////Иваново
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 56.995158, lng: 40.978293},
+    title: 'St.Petersburg'
+  });
+
+//////////Малоярославец
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 55.009102, lng: 36.469882},
+    title: 'San Valentino'
+  });
+
+//////////Пенза
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 53.197189, lng: 45.019330},
+    title: 'Jaime'
+  });
+
+//////////Сочи
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 43.659562, lng: 39.660520},
+    title: 'Марта'
+  });
+
+//////////Тихвин
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: 59.644657, lng: 33.547604},
+    title: 'Зарина'
+  });
+
 
 }
 
@@ -215,57 +281,83 @@ function attachSecretMessage(marker, secretMessage) {
 
 				<div class="col-xs-6">
 					<div class="shops__list">
-						<span class="shops__list--name">Богема</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">BOGEMA</span>
+						<span class="shops__list--address">ТРК &laquo;Променад&raquo;, Комендантский пр. 9/2</span>
+						<span class="shops__list--phone">+7&nbsp;812 917-97-82</span>
+						<span class="shops__list--site"><a href="http://bogemashop.ru">www.bogemashop.ru</a></span>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="shops__list">
-						<span class="shops__list--name">Адриатика</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">BOGEMA</span>
+						<span class="shops__list--address">ТРК &laquo;Авеню&raquo;, Выборгское шоссе, 15А</span>
+						<span class="shops__list--phone">+7&nbsp;812 924-45-82</span>
+						<span class="shops__list--site"><a href="http://bogemashop.ru">www.bogemashop.ru</a></span>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="shops__list">
-						<span class="shops__list--name">Джинс Лайн</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">BOGEMA</span>
+						<span class="shops__list--address">ТРК &laquo;Атлантик-Сити&raquo;, ул.Савушкина, 126А</span>
+						<span class="shops__list--phone">+7&nbsp;812 957-40-82</span>
+						<span class="shops__list--site"><a href="http://bogemashop.ru">www.bogemashop.ru</a></span>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="shops__list">
-						<span class="shops__list--name">Мелдес</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">COCONUDA</span>
+						<span class="shops__list--address">ТРК &laquo;Заневский Каскад&raquo;, Заневский пр. 71, корпус В</span>
+						<span class="shops__list--phone">+7&nbsp;911 810-77-61</span>
+						<span class="shops__list--site"><a href="https://vk.com/coconuda">vk.com/coconuda</a></span>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="shops__list">
-						<span class="shops__list--name">ТРК Заневский</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">Adriatica</span>
+						<span class="shops__list--address">ТК&nbsp;&laquo;Космос&raquo;, ул.Типанова, 27</span>
+						<span class="shops__list--phone">+7&nbsp;812 907-99-33</span>
+						<span class="shops__list--site"><a href="https://vk.com/club4122637">vk.com/club4122637</a></span>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="shops__list">
-						<span class="shops__list--name">ТРК Заневский</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">Spirito Giovane Antiboutique</span>
+						<span class="shops__list--address">г.Выборг, ул.Выборгская 4</span>
+						<span class="shops__list--phone">+7&nbsp;931 356-29-29</span>
+						<span class="shops__list--site"><a href="https://vk.com/spirito_giovane">vk.com/spirito_giovane</a></span>
 					</div>
 				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">Jeans line</span>
+						<span class="shops__list--address">Чкаловский пр. 42</span>
+						<span class="shops__list--phone">+7&nbsp;812 230-76-34</span>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="shops__list">
+						<span class="shops__list--name">СЕВЕРИНА</span>
+						<span class="shops__list--address">г.Колпино, ул.Финляндская 24б</span>
+						<span class="shops__list--phone">+7&nbsp;812 333-38-77</span>
+					</div>
+				</div>
+
+				<div class="col-xs-12">
+					<div class="shops__list">
+						<span class="shops__list--name">Ma&rsquo;Cherie</span>
+						<span class="shops__list--address">г.Пушкин, ТРК &laquo;Константиновский&raquo;, ул.Полковая, 1</span>
+						<span class="shops__list--phone">+7&nbsp;952 215-85-05</span>
+						<span class="shops__list--site"><a href="http://mypalto.ru">www.mypalto.ru</a></span>
+					</div>
+				</div>
+
 
 			</div><!-- col -->
 		</div>
@@ -282,39 +374,11 @@ function attachSecretMessage(marker, secretMessage) {
 
 			<div class="col-xs-12 col-sm-6">
 
-				<div class="col-xs-6">
+				<div class="col-xs-12">
 					<div class="shops__list">
 						<span class="shops__list--name">Салон NJ</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
-					</div>
-				</div>
-
-				<div class="col-xs-6">
-					<div class="shops__list">
-						<span class="shops__list--name">Адриатика</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
-					</div>
-				</div>
-
-				<div class="col-xs-6">
-					<div class="shops__list">
-						<span class="shops__list--name">Джинс Лайн</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
-					</div>
-				</div>
-
-				<div class="col-xs-6">
-					<div class="shops__list">
-						<span class="shops__list--name">Мелдес</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--address">ТЦ&nbsp;&laquo;Звездочка&raquo;, ул.Покрышкина, 4</span>
+						<span class="shops__list--phone">+7&nbsp;985 100-53-07</span>
 					</div>
 				</div>
 
@@ -327,27 +391,87 @@ function attachSecretMessage(marker, secretMessage) {
 		<div class="row inner">
 			<div class="col-xs-12 col-sm-6">
 				<div class="shops__city">
-					<span>Ростов на Дону</span>
+					<span>Вязьма</span>
 				</div>
 			</div><!-- col -->
 
 			<div class="col-xs-12 col-sm-6">
 
-				<div class="col-xs-6">
+				<div class="col-xs-12">
 					<div class="shops__list">
-						<span class="shops__list--name">Салон NJ</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">Дамское счастье</span>
+						<span class="shops__list--address">ул.25 Октября, 2А</span>
+						<span class="shops__list--phone">+7&nbsp;905 163-94-26</span>
 					</div>
 				</div>
 
-				<div class="col-xs-6">
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
+
+
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Иваново</span>
+				</div>
+			</div><!-- col -->
+
+			<div class="col-xs-12 col-sm-6">
+
+				<div class="col-xs-12">
 					<div class="shops__list">
-						<span class="shops__list--name">Адриатика</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">St.Petersburg</span>
+						<span class="shops__list--address">ТЦ&nbsp;&laquo;Воздвиженка&raquo;, ул.Красной Армии&nbsp;1 (пл.Революции)</span>
+						<span class="shops__list--phone">+7&nbsp;910 668-72-30</span>
+					</div>
+				</div>
+
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
+
+
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Малоярославец</span>
+				</div>
+			</div><!-- col -->
+
+			<div class="col-xs-12 col-sm-6">
+
+				<div class="col-xs-12">
+					<div class="shops__list">
+						<span class="shops__list--name">San Valentino</span>
+						<span class="shops__list--address">БЦ&nbsp;&laquo;Домино&raquo;, ул.Гагарина, 2а</span>
+						<span class="shops__list--phone">+7&nbsp;919 039-40-50</span>
+						<span class="shops__list--site"><a href="https://vk.com/club73520317">vk.com/club73520317</a></span>
+					</div>
+				</div>
+
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
+
+
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Пенза</span>
+				</div>
+			</div><!-- col -->
+
+			<div class="col-xs-12 col-sm-6">
+
+				<div class="col-xs-12">
+					<div class="shops__list">
+						<span class="shops__list--name">Jaime</span>
+						<span class="shops__list--address">ул.Московская, 83</span>
+						<span class="shops__list--phone">+7&nbsp;841 220-80-03</span>
 					</div>
 				</div>
 
@@ -366,46 +490,41 @@ function attachSecretMessage(marker, secretMessage) {
 
 			<div class="col-xs-12 col-sm-6">
 
-				<div class="col-xs-6">
+				<div class="col-xs-12">
 					<div class="shops__list">
-						<span class="shops__list--name">Салон NJ</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
+						<span class="shops__list--name">Марта</span>
+						<span class="shops__list--address">Батумское шоссе, 26</span>
+						<span class="shops__list--phone">+7&nbsp;988 411-08-28</span>
 					</div>
 				</div>
-
-				<div class="col-xs-6">
-					<div class="shops__list">
-						<span class="shops__list--name">Адриатика</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
-					</div>
-				</div>
-
-				<div class="col-xs-6">
-					<div class="shops__list">
-						<span class="shops__list--name">Джинс Лайн</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
-					</div>
-				</div>
-
-				<div class="col-xs-6">
-					<div class="shops__list">
-						<span class="shops__list--name">Мелдес</span>
-						<span class="shops__list--address">Санкт-Петербург, наб. реки Фонтанки, д. 31</span>
-						<span class="shops__list--phone">+7 812 374 42 12</span>
-						<span class="shops__list--site"><a href="#">www.google.com</a></span>
-					</div>
-				</div>
-
 
 			</div><!-- col -->
 		</div>
 		<!-- END city -->
+		
+
+		<!-- City -->
+		<div class="row inner">
+			<div class="col-xs-12 col-sm-6">
+				<div class="shops__city">
+					<span>Тихвин</span>
+				</div>
+			</div><!-- col -->
+
+			<div class="col-xs-12 col-sm-6">
+
+				<div class="col-xs-12">
+					<div class="shops__list">
+						<span class="shops__list--name">Зарина</span>
+						<span class="shops__list--address">1-ый&nbsp;микрорайон&nbsp;, 3</span>
+						<span class="shops__list--phone">+7&nbsp;813 677-49-85</span>
+					</div>
+				</div>
+
+			</div><!-- col -->
+		</div>
+		<!-- END city -->
+
 
 	</div><!-- container -->
 </article> <!-- shops -->
