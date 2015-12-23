@@ -519,7 +519,7 @@ h6,
 .h5,
 .h6
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-weight: 500;
     line-height: 1.1;
 
@@ -7799,32 +7799,6 @@ button.close
     width: 100%;
     height: 100vh;
 }
-.promo__bg
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    overflow: hidden;
-
-    width: 100%;
-}
-.promo__img
-{
-    width: auto;
-    height: 100vh;
-
-    background-position: 50%;
-    background-size: cover;
-}
-.promo__img--retail
-{
-    background-image: url(../../img/images/2.jpg);
-}
-.promo__img--wholesale
-{
-    background-image: url(../../img/images/3.jpg);
-}
 .promo__item
 {
     position: absolute;
@@ -7834,28 +7808,46 @@ button.close
     width: 100%;
     height: 100vh;
 
-    -webkit-transition: background-color .35s;
-            transition: background-color .35s;
-
     color: #fff;
 }
-.promo__item:hover
+.promo__item--retail
 {
+    background-image: url(../../img/images/2.jpg);
+    background-size: cover;
+}
+.promo__item--retail:hover
+{
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+            transition:         transform .3s ease-in-out;
+
     color: #fff;
-    background: rgba(0, 0, 0, .5);
+    background-image: url(../../img/images/2-hover.jpg);
+}
+.promo__item--wholesale
+{
+    background-image: url(../../img/images/3.jpg);
+    background-size: cover;
+}
+.promo__item--wholesale:hover
+{
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+            transition:         transform .3s ease-in-out;
+
+    color: #fff;
+    background-image: url(../../img/images/3-hover.jpg);
 }
 .promo__item__content
 {
     position: absolute;
-    top: 20%;
+    top: 60%;
     right: 40px;
     left: 40px;
 
-    text-align: left;
+    text-align: center;
 }
 .promo__item__content__title
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-size: 26px;
     font-weight: bold;
     font-style: italic;
@@ -7936,9 +7928,11 @@ button.close
     {
         top: 70vh;
     }
-    .promo__item
+    .promo__item__content
     {
-        background: rgba(0, 0, 0, .5);
+        top: 45%;
+        right: 20px;
+        left: 20px;
     }
 }
 .product
@@ -8118,7 +8112,7 @@ form.newsletter input[placeholder]
 }
 .product-card__title
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-size: 3rem;
     font-weight: bold;
     font-style: italic;
@@ -8204,7 +8198,7 @@ img
 }
 .form__title span
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-size: 2em;
     font-weight: bold;
     font-style: italic;
@@ -8264,13 +8258,13 @@ img
 }
 .serif
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-weight: bold;
     font-style: italic;
 }
 i.arrow
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-size: 14px;
     font-style: italic;
 
@@ -8397,7 +8391,7 @@ a.facebook:hover
 }
 .info-block h1
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-weight: bold;
     font-style: italic;
 
@@ -8457,7 +8451,7 @@ a.facebook:hover
 }
 .shops__city span
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-size: 2em;
     font-weight: bold;
     font-style: italic;
@@ -8502,7 +8496,7 @@ a.facebook:hover
 }
 .news__block--title
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-weight: bold;
     font-style: italic;
 
@@ -8643,7 +8637,7 @@ a.facebook:hover
 }
 .card__item__content__title
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-size: 3em;
     font-weight: bold;
     font-style: italic;
@@ -8705,7 +8699,7 @@ a.facebook:hover
 button,
 .button
 {
-    font-family: Playfair Display, serif;
+    font-family: PlayfairDisplay, serif;
     font-style: italic;
 
     padding: 0 1.4em;
