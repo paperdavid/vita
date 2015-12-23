@@ -7889,7 +7889,7 @@ button.close
 }
 .promo__item__content__link:hover
 {
-    color: #b88b58;
+    text-decoration: underline;
 }
 @media (max-width: 768px)
 {
