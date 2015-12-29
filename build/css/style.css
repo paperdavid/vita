@@ -7607,10 +7607,37 @@ button.close
 
     -webkit-transform: translate3d(0px, 0px, 0px);
 }
+.owl-nav
+{
+    font-size: 2em;
+    font-weight: bold;
+
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    margin-top: -20px;
+
+    text-align: center;
+
+    color: #b88b58;
+}
+.owl-prev
+{
+    position: absolute;
+    left: 5%;
+}
+.owl-next
+{
+    position: absolute;
+    right: 5%;
+}
 .owl-carousel .owl-controls .owl-nav .owl-prev,
 .owl-carousel .owl-controls .owl-nav .owl-next,
 .owl-carousel .owl-controls .owl-dot
 {
+    display: inline;
+
     cursor: pointer;
     cursor: hand;
     -webkit-user-select: none;
@@ -8388,6 +8415,17 @@ a.facebook:hover
 .link a
 {
     color: #2e3032;
+}
+.sales span
+{
+    font-family: ProbaProRegular, sans-serif;
+    font-style: normal;
+
+    display: block;
+
+    margin-top: 1em;
+
+    color: #fff;
 }
 .map-box
 {

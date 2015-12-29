@@ -23,8 +23,10 @@ $(document).ready(function() {
 		$('.carousel-card').owlCarousel({
 			loop:true,
 			margin:100,
-			nav:false,
-			autoplay: 1000,
+			dots: true,
+			nav:true,
+			autoplayHoverPause: true,
+			autoplay: 10000,
 			responsive:{
 					0:{
 							items:1
@@ -41,7 +43,8 @@ $(document).ready(function() {
 		$('.carousel-about').owlCarousel({
 			loop:true,
 			margin:10,
-			nav:false,
+			dots: true,
+			nav:true,
 			autoplay: 500,
 			responsive:{
 					0:{
@@ -56,12 +59,12 @@ $(document).ready(function() {
 			}
 		})
 
-		$('.carousel-feedback').owlCarousel({
+		$('#carousel-feedback').owlCarousel({
 			loop:true,
-			nav:false,
 			autoplay: 100,
 			autoplayHoverPause: true,
 			items: 1
 		})
+
 
 });
