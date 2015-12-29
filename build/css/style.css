@@ -7792,6 +7792,10 @@ button.close
 {
     padding-top: 52px;
 }
+.inner__mini
+{
+    padding: 3rem 0;
+}
 .promo
 {
     position: relative;
@@ -8762,16 +8766,265 @@ button,
 
     border: 2px solid #fff;
     border-radius: 50px;
+    background-size: cover;
 }
-.materials--brown
+.materials--01004-blue
 {
-    background-color: brown;
+    background-image: url(../../img/images/clothes/w15/01-004/01-004-m-bl.jpg);
 }
-.materials--yellow
+.materials--01008-blue
 {
-    background-color: yellow;
+    background-image: url(../../img/images/clothes/w15/01-008/01-008-m-bl.jpg);
 }
-.materials--red
+.materials--01008-beg
 {
-    background-color: red;
+    background-image: url(../../img/images/clothes/w15/01-008/01-008-m-beg.jpg);
+}
+.materials--01009-ker
+{
+    background-image: url(../../img/images/clothes/w15/01-009/01-009-m-ker.jpg);
+}
+.materials--01010-beg
+{
+    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-beg.jpg);
+}
+.materials--01010-bl
+{
+    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-bl.jpg);
+}
+.materials--01010-black
+{
+    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-black.jpg);
+}
+.materials--01010-print
+{
+    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-print.jpg);
+}
+.materials--01012-bl
+{
+    background-image: url(../../img/images/clothes/w15/01-012/01-012-m-bl.jpg);
+}
+.materials--01013-bl
+{
+    background-image: url(../../img/images/clothes/w15/01-013/01-013-m-bl.jpg);
+}
+.materials--01013-cr
+{
+    background-image: url(../../img/images/clothes/w15/01-013/01-013-m-cr.jpg);
+}
+.materials--01015-gr
+{
+    background-image: url(../../img/images/clothes/w15/01-015/01-015-m-gr.jpg);
+}
+.materials--01015-bl
+{
+    background-image: url(../../img/images/clothes/w15/01-015/01-015-m-bl.jpg);
+}
+.materials--02006-black
+{
+    background-image: url(../../img/images/clothes/w15/02-006/02-006-m-black.jpg);
+}
+.materials--02006-blu
+{
+    background-image: url(../../img/images/clothes/w15/02-006/02-006-m-blu.jpg);
+}
+.materials--02006-gr
+{
+    background-image: url(../../img/images/clothes/w15/02-006/02-006-m-gr.jpg);
+}
+.materials--02007-bg
+{
+    background-image: url(../../img/images/clothes/w15/02-007/02-007-m-bg.jpg);
+}
+.materials--02007-bl
+{
+    background-image: url(../../img/images/clothes/w15/02-007/02-007-m-bl.jpg);
+}
+.materials--02008-bl
+{
+    background-image: url(../../img/images/clothes/w15/02-008/02-008-m-bl.jpg);
+}
+.materials--02008-pur
+{
+    background-image: url(../../img/images/clothes/w15/02-008/02-008-m-pur.jpg);
+}
+.materials--03003-bl
+{
+    background-image: url(../../img/images/clothes/w15/03-003/03-003-m-bl.jpg);
+}
+.materials--03003-pur
+{
+    background-image: url(../../img/images/clothes/w15/03-003/03-003-m-pur.jpg);
+}
+.materials--03004-bl
+{
+    background-image: url(../../img/images/clothes/w15/03-004/03-004-m-bl.jpg);
+}
+.materials--03004-pk
+{
+    background-image: url(../../img/images/clothes/w15/03-004/03-004-m-pk.jpg);
+}
+.materials--04006-bg
+{
+    background-image: url(../../img/images/clothes/w15/04-006/04-006-m-bg.jpg);
+}
+.materials--04006-bl
+{
+    background-image: url(../../img/images/clothes/w15/04-006/04-006-m-bl.jpg);
+}
+.materials--04007-all
+{
+    background-image: url(../../img/images/clothes/w15/04-007/04-004-m-all.jpg);
+}
+.materials--04007-ser
+{
+    background-image: url(../../img/images/clothes/w15/04-007/04-004-m-ser.jpg);
+}
+.materials--05001-bl
+{
+    background-image: url(../../img/images/clothes/w15/05-001/05-001-m-bl.jpg);
+}
+.materials--05001-wt
+{
+    background-image: url(../../img/images/clothes/w15/05-001/05-001-m-wt.jpg);
+}
+.materials--05004-bl
+{
+    background-image: url(../../img/images/clothes/w15/05-004/05-004-m-bl.jpg);
+}
+.materials--05005-wt
+{
+    background-image: url(../../img/images/clothes/w15/05-005/05-005-m-wt.jpg);
+}
+.materials--05006-print
+{
+    background-image: url(../../img/images/clothes/w15/05-006/05-006-m-print.jpg);
+}
+.materials--05007-bg
+{
+    background-image: url(../../img/images/clothes/w15/05-007/05-007-m-bg.jpg);
+}
+.materials--05007-bl
+{
+    background-image: url(../../img/images/clothes/w15/05-007/05-007-m-bl.jpg);
+}
+.materials--05008-bl
+{
+    background-image: url(../../img/images/clothes/w15/05-008/05-008-m-bl.jpg);
+}
+.materials--05008-gr
+{
+    background-image: url(../../img/images/clothes/w15/05-008/05-008-m-gr.jpg);
+}
+.materials--06017-bl
+{
+    background-image: url(../../img/images/clothes/w15/06-017/06-017-m-bl.jpg);
+}
+.materials--06017-dbl
+{
+    background-image: url(../../img/images/clothes/w15/06-017/06-017-m-dbl.jpg);
+}
+.materials--06017-pk
+{
+    background-image: url(../../img/images/clothes/w15/06-017/06-017-m-pk.jpg);
+}
+.materials--07006-bl
+{
+    background-image: url(../../img/images/clothes/w15/07-006/07-006-m-bl.jpg);
+}
+.materials--07006-dbl
+{
+    background-image: url(../../img/images/clothes/w15/07-006/07-006-m-dbl.jpg);
+}
+.materials--07007-ber
+{
+    background-image: url(../../img/images/clothes/w15/07-007/07-007-m-ber.jpg);
+}
+.materials--07007-pk
+{
+    background-image: url(../../img/images/clothes/w15/07-007/07-007-m-pk.jpg);
+}
+.materials--07008-bl
+{
+    background-image: url(../../img/images/clothes/w15/07-008/07-008-m-bl.jpg);
+}
+.materials--07008-pk
+{
+    background-image: url(../../img/images/clothes/w15/07-008/07-008-m-pk.jpg);
+}
+.materials--08004-bg
+{
+    background-image: url(../../img/images/clothes/w15/08-004/08-004-m-bg.jpg);
+}
+.materials--08005-bg
+{
+    background-image: url(../../img/images/clothes/w15/08-005/08-005-m-bg.jpg);
+}
+.materials--08005-dbg
+{
+    background-image: url(../../img/images/clothes/w15/08-005/08-005-m-dbg.jpg);
+}
+.materials--09001-bg
+{
+    background-image: url(../../img/images/clothes/w15/09-001/09-001-m-bg.jpg);
+}
+.materials--09001-bk
+{
+    background-image: url(../../img/images/clothes/w15/09-001/09-001-m-bk.jpg);
+}
+.materials--09001-bl
+{
+    background-image: url(../../img/images/clothes/w15/09-001/09-001-m-bl.jpg);
+}
+.materials--09001-wt
+{
+    background-image: url(../../img/images/clothes/w15/09-001/09-001-m-wt.jpg);
+}
+.materials--09004-pbg
+{
+    background-image: url(../../img/images/clothes/w15/09-004/09-004-m-pbg.jpg);
+}
+.materials--09004-wt
+{
+    background-image: url(../../img/images/clothes/w15/09-004/09-004-m-wt.jpg);
+}
+.materials--09005-bk
+{
+    background-image: url(../../img/images/clothes/w15/09-005/09-005-m-bk.jpg);
+}
+.materials--09005-bl
+{
+    background-image: url(../../img/images/clothes/w15/09-005/09-005-m-bl.jpg);
+}
+.materials--10003-wt
+{
+    background-image: url(../../img/images/clothes/w15/10-003/10-003-m-wt.jpg);
+}
+.materials--10003-c
+{
+    background-image: url(../../img/images/clothes/w15/10-003/10-003-m-c.jpg);
+}
+.materials--11005-ser
+{
+    background-image: url(../../img/images/clothes/w15/11-005/11-005-m-ser.jpg);
+}
+.materials--11005-wt
+{
+    background-image: url(../../img/images/clothes/w15/11-005/11-005-m-wt1.jpg);
+}
+.materials--11006-c
+{
+    background-image: url(../../img/images/clothes/w15/11-006/11-006-m-c.jpg);
+}
+.materials--11006-wt
+{
+    background-image: url(../../img/images/clothes/w15/11-006/11-006-m-wt.jpg);
+}
+.materials--11007-bl
+{
+    background-image: url(../../img/images/clothes/w15/11-007/11-006-m-bl.jpg);
+}
+.materials--11007-c
+{
+    background-image: url(../../img/images/clothes/w15/11-007/11-006-m-c.jpg);
 }
