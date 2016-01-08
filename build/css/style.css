@@ -8427,6 +8427,28 @@ a.facebook:hover
 
     color: #fff;
 }
+.quotes p:before
+{
+    font-family: PlayfairDisplay, serif;
+    font-size: 5em;
+    line-height: 0;
+
+    content: '«';
+    vertical-align: top;
+
+    color: #b88b58;
+}
+.quotes p:after
+{
+    font-family: PlayfairDisplay, serif;
+    font-size: 5em;
+    line-height: 15px;
+
+    content: '»';
+    vertical-align: top;
+
+    color: #b88b58;
+}
 .map-box
 {
     box-shadow: 0 1px 0 #b88b58;
