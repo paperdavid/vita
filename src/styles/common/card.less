@@ -93,10 +93,36 @@ button, .button {
   clear:none;
 }
 
+.collections {
+	height: 50px;
+	padding: 15px 0;
 
+
+	& ul {
+		width: 100%;
+		margin: 0 auto;
+		-webkit-padding-start: 0px;
+	}
+
+	& ul li {
+		display: inline;
+		margin: 0 2em;
+	}
+}
 
 
 @media (max-width: 800px) {
+
+	.collections {
+		padding: 5px 0;
+		height: 140px;
+
+		& ul li {
+			display: block;
+			margin: .5em;
+		}
+	}
+
 	.card  {
 	position: relative;
 	width: 100%;

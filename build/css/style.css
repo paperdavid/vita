@@ -8176,17 +8176,17 @@ form.newsletter input[placeholder]
 }
 .product-card__link:hover img
 {
-    -webkit-transform: scale(1.04);
-        -ms-transform: scale(1.04);
-            transform: scale(1.04);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 .product-card__link img
 {
     -webkit-transition: -webkit-transform 300ms ease-in-out;
             transition:         transform 300ms ease-in-out;
-    -webkit-transform: scale(1.01);
-        -ms-transform: scale(1.01);
-            transform: scale(1.01);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 hr
 {
@@ -8448,6 +8448,10 @@ a.facebook:hover
     vertical-align: top;
 
     color: #b88b58;
+}
+.text--center
+{
+    text-align: center;
 }
 .map-box
 {
@@ -8785,8 +8789,37 @@ button,
 {
     clear: none;
 }
+.collections
+{
+    height: 50px;
+    padding: 15px 0;
+}
+.collections ul
+{
+    width: 100%;
+    margin: 0 auto;
+
+    -webkit-padding-start: 0;
+}
+.collections ul li
+{
+    display: inline;
+
+    margin: 0 2em;
+}
 @media (max-width: 800px)
 {
+    .collections
+    {
+        height: 140px;
+        padding: 5px 0;
+    }
+    .collections ul li
+    {
+        display: block;
+
+        margin: .5em;
+    }
     .card
     {
         position: relative;
@@ -8844,21 +8877,17 @@ button,
 {
     background-image: url(../../img/images/clothes/w15/01-009/01-009-m-ker.jpg);
 }
-.materials--01010-beg
+.materials--01014-beg
 {
-    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-beg.jpg);
+    background-image: url(../../img/images/clothes/w15/01-014/01-014-m-beg.jpg);
 }
-.materials--01010-bl
+.materials--01014-bl
 {
-    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-bl.jpg);
+    background-image: url(../../img/images/clothes/w15/01-014/01-014-m-bl.jpg);
 }
-.materials--01010-black
+.materials--01014-print
 {
-    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-black.jpg);
-}
-.materials--01010-print
-{
-    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-print.jpg);
+    background-image: url(../../img/images/clothes/w15/01-014/01-014-m-print.jpg);
 }
 .materials--01012-bl
 {
@@ -9087,4 +9116,8 @@ button,
 .materials--11007-c
 {
     background-image: url(../../img/images/clothes/w15/11-007/11-006-m-c.jpg);
+}
+.materials--01010-bl
+{
+    background-image: url(../../img/images/clothes/w15/01-010/01-010-m-bl.jpg);
 }
